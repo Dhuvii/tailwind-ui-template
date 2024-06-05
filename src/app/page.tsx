@@ -161,7 +161,7 @@ export default function Home() {
             what everyone is saying
           </p>
 
-          <h2 className="mt-2 text-6xl font-medium tracking-tighter text-gray-950">
+          <h2 className="mt-2 text-5xl font-medium tracking-tighter text-gray-950 md:text-6xl">
             Trusted by professionals
           </h2>
         </div>
@@ -290,7 +290,7 @@ const TestimonialCard = ({
       ref={ref}
       initial={{ opacity: 1 }}
       animate={{ opacity: isInView ? 1 : 0.5 }}
-      className={`relative m-1 flex aspect-[3/4] w-full flex-shrink-0 snap-center overflow-hidden rounded-3xl bg-gray-950 ring-1 ring-gray-950/10 sm:w-96`}
+      className={`relative m-1 flex aspect-[3/4] w-full flex-shrink-0 snap-normal overflow-hidden rounded-3xl bg-gray-950 ring-1 ring-gray-950/10 sm:w-96`}
     >
       <div className="relative w-full sm:h-96 sm:w-96">
         <Image
