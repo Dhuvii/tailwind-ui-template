@@ -1,10 +1,22 @@
+"use client";
 import { cn } from "@/utils/cn";
+import { motion, useInView, useMotionValue } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
-import { ComponentProps, ReactNode } from "react";
+import {
+  ComponentProps,
+  ReactNode,
+  RefObject,
+  forwardRef,
+  useEffect,
+  useRef,
+} from "react";
 
 export default function Home() {
+  const container = useRef(null);
   return (
     <main className="">
+      {/* hero */}
       <section className="p-2 pb-0">
         <div className="w-full rounded-3xl bg-[linear-gradient(125deg,var(--tw-gradient-stops))] from-[#FFF1BE] from-[28%] via-[#EE87CB] via-[70%] to-[#b060FF] pb-24 pt-16 ring-inset ring-black/5 md:pb-[11.8rem]">
           <nav className="relative flex items-center justify-between px-5 py-2 md:px-12 xl:px-0">
@@ -140,9 +152,172 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* hero */}
+
+      {/* testimonial */}
+      <section className="py-32">
+        <div className="mx-auto w-full max-w-screen-xl px-5 lg:px-0">
+          <p className="font-mono text-xs/4 uppercase tracking-wider text-gray-500">
+            what everyone is saying
+          </p>
+
+          <h2 className="mt-2 text-6xl font-medium tracking-tighter text-gray-950">
+            Trusted by professionals
+          </h2>
+        </div>
+
+        <div
+          ref={container}
+          className="mx-auto mt-16 flex w-full max-w-screen-xl snap-x items-start justify-start gap-6 overflow-x-auto px-5 pb-3 lg:px-0"
+        >
+          <TestimonialCard
+            root={container}
+            name="Tim Yards"
+            content="Thanks to BarelyHR, we're now finding a new candidates that we never would have found with our previous methods."
+            position="VP of Human Resources, Protocol"
+            image="https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+          <TestimonialCard
+            root={container}
+            name="Amy chase"
+            content="BarelyHR made onboarding our new remote employees a breeze."
+            position="Head of Marketting, TaxPal"
+            image="https://images.pexels.com/photos/2448531/pexels-photo-2448531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+          <TestimonialCard
+            root={container}
+            name="James Warden"
+            content="Lorem ipsum dolor sit amet consectetur adipisicing elit, dolor sit amet consectetur adipisicing elit."
+            position="VP Product Development, TaxPal"
+            image="https://images.pexels.com/photos/10276340/pexels-photo-10276340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+          <TestimonialCard
+            root={container}
+            name="Tim Yards"
+            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, adipisci! Saepe velit dignissimos laboriosam aspernatur."
+            position="VP of Human Resources, Protocol"
+            image="https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+          <TestimonialCard
+            root={container}
+            name="Amy chase"
+            content="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            position="Head of Marketting, TaxPal"
+            image="https://images.pexels.com/photos/2448531/pexels-photo-2448531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+        </div>
+
+        <div className="mx-auto mt-16 w-full max-w-screen-xl px-5 lg:px-0">
+          <div className="flex justify-between">
+            <div className="">
+              <p className="max-w-sm text-sm/7 text-gray-600">
+                Join professionals who trust BarelyHR for hiring and onboarding
+                new employees.
+              </p>
+
+              <div className="mt-2">
+                <a
+                  className="inline-flex items-center gap-2 text-sm/6 font-medium text-pink-600"
+                  href="#"
+                >
+                  Get started{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="size-5"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div className="hidden gap-5 md:flex">
+              <button className="flex size-12 items-center justify-center rounded-full p-3 text-gray-950 shadow-sm ring-[1px] ring-gray-950/10">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="size-5"
+                >
+                  <path d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z" />
+                </svg>
+              </button>
+              <button className="flex size-12 items-center justify-center rounded-full p-3 text-gray-950 shadow-sm ring-[1px] ring-gray-950/10">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="size-5"
+                >
+                  <path d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* testimonial */}
     </main>
   );
 }
+
+interface ITestimonialCard extends ComponentProps<"div"> {
+  image: string;
+  content: string;
+  name: string;
+  position: string;
+  root: RefObject<Element>;
+}
+
+const TestimonialCard = ({
+  image,
+  content,
+  name,
+  position,
+  root,
+}: ITestimonialCard) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { root, amount: 0.7 });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 1 }}
+      animate={{ opacity: isInView ? 1 : 0.5 }}
+      className={`relative m-1 flex aspect-[3/4] w-full flex-shrink-0 snap-center overflow-hidden rounded-3xl bg-gray-950 ring-1 ring-gray-950/10 sm:w-96`}
+    >
+      <div className="relative w-full sm:h-96 sm:w-96">
+        <Image
+          fill
+          className="aspect-square object-cover [mask-image:linear-gradient(rgb(3_8_7),transparent)]"
+          src={image}
+          alt={`Image of ${name}`}
+        />
+      </div>
+
+      <figure className="absolute inset-x-0 bottom-0">
+        <blockquote className="px-5 sm:px-10">
+          <p className="relative w-full text-base/7 text-white before:absolute before:-left-[1ch] before:content-['“'] md:text-xl/7">
+            {content} ”
+          </p>
+        </blockquote>
+
+        <figcaption className="mt-5 border-t border-white/20 px-5 pb-5 pt-5 sm:bg-gray-950 sm:px-10 sm:pb-10">
+          <p className="text-sm/6 text-white">{name}</p>
+          <p className="bg-gradient-to-r from-[#FFF1BE] from-[28%] via-[#EE87CB] via-[70%] to-[#b060FF] bg-clip-text text-sm/6 font-medium text-transparent">
+            {position}
+          </p>
+        </figcaption>
+      </figure>
+    </motion.div>
+  );
+};
 
 interface IContainerWithPlusCorner extends ComponentProps<"div"> {
   children: ReactNode;
