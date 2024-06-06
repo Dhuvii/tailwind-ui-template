@@ -1,7 +1,6 @@
 "use client";
 import { cn } from "@/utils/cn";
-import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
-import { Dekko } from "next/font/google";
+import { motion, useMotionValue, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -215,7 +214,7 @@ export default function Home() {
                 }}
                 root={containerRef}
                 getItemPosition={() => getItemPosition(idx)}
-                name={`Tim Yards ${idx}`}
+                name={`Tim Yards`}
                 content="Thanks to BarelyHR, we're now finding a new candidates that we never would have found with our previous methods."
                 position="VP of Human Resources, Protocol"
                 image="https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -318,21 +317,26 @@ interface ITestimonialCard extends ComponentProps<"div"> {
 
 const TestimonialCard = forwardRef<HTMLDivElement, ITestimonialCard>(
   ({ image, content, name, position, root, getItemPosition }, ref) => {
-    const { scrollX } = useScroll({ container: root });
     const [_, forceRender] = useState(false);
     const d = useMotionValue(getItemPosition() || 0);
     const opacity = useTransform(d, [0, 500], [0.5, 1]);
 
+    function setDelta() {
+      d.set(getItemPosition() || 0);
+    }
+
     useEffect(() => {
       forceRender(true);
-      d.set(getItemPosition() || 0);
+      setDelta();
     }, []);
 
     useEffect(() => {
-      scrollX.on("change", (v) => {
-        d.set(getItemPosition() || 0);
-      });
-    }, [scrollX]);
+      root?.current?.addEventListener("scroll", setDelta);
+
+      return () => {
+        root?.current?.removeEventListener("scroll", setDelta);
+      };
+    }, [root]);
 
     return (
       <motion.div
