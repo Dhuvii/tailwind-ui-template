@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "@/utils/cn";
-import { motion, useInView, useMotionValue } from "framer-motion";
+import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
+import { Dekko } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -10,10 +11,38 @@ import {
   forwardRef,
   useEffect,
   useRef,
+  useState,
 } from "react";
 
 export default function Home() {
-  const container = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const topContRef = useRef<HTMLDivElement>(null);
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const getItemPosition = (index: number): number | null => {
+    if (containerRef.current && itemRefs.current[index] && topContRef.current) {
+      const topContRect = topContRef.current.getBoundingClientRect();
+      const itemRect = itemRefs.current[index]!.getBoundingClientRect();
+
+      const leftXPos = Math.round(topContRect.x) - Math.round(itemRect.x - 4);
+      const rightXPos =
+        Math.round(itemRect.x + 4) +
+        Math.round(itemRect.width) -
+        Math.round(topContRect.right);
+
+      const leftClamp = 500 - Math.max(0, Math.min(500, leftXPos));
+      const rightClamp = 500 - Math.max(0, Math.min(500, rightXPos));
+
+      let delta =
+        itemRect.x > topContRect.left + topContRect.width / 2
+          ? rightClamp
+          : leftClamp;
+
+      return delta;
+    }
+    return null;
+  };
+
   return (
     <main className="">
       {/* hero */}
@@ -121,7 +150,7 @@ export default function Home() {
             </div>
           </nav>
 
-          <div className="mx-auto mt-24 w-full max-w-screen-xl px-5 md:mt-40 md:px-12 lg:px-0">
+          <div className="mx-auto mt-24 w-full max-w-screen-xl px-5 md:mt-40 md:px-12 xl:px-0">
             {/* heading */}
             <h1 className="text-7xl font-medium tracking-tighter text-gray-950 md:text-9xl">
               Hire Smarter.
@@ -156,7 +185,10 @@ export default function Home() {
 
       {/* testimonial */}
       <section className="py-32">
-        <div className="mx-auto w-full max-w-screen-xl px-5 lg:px-0">
+        <div
+          ref={topContRef}
+          className="mx-auto w-full max-w-screen-xl px-5 xl:px-0"
+        >
           <p className="font-mono text-xs/4 uppercase tracking-wider text-gray-500">
             what everyone is saying
           </p>
@@ -166,48 +198,56 @@ export default function Home() {
           </h2>
         </div>
 
-        <div
-          ref={container}
-          className="mx-auto mt-16 flex w-full max-w-screen-xl snap-x items-start justify-start gap-6 overflow-x-auto px-5 pb-3 lg:px-0"
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          ref={containerRef}
+          className="mt-5 flex snap-x snap-mandatory gap-8 overflow-x-auto overscroll-x-contain px-5 [--scroll-padding:calc((100vw-1280px)/2)] xl:px-[var(--scroll-padding)]"
         >
-          <TestimonialCard
-            root={container}
-            name="Tim Yards"
-            content="Thanks to BarelyHR, we're now finding a new candidates that we never would have found with our previous methods."
-            position="VP of Human Resources, Protocol"
-            image="https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          />
-          <TestimonialCard
-            root={container}
-            name="Amy chase"
-            content="BarelyHR made onboarding our new remote employees a breeze."
-            position="Head of Marketting, TaxPal"
-            image="https://images.pexels.com/photos/2448531/pexels-photo-2448531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          />
-          <TestimonialCard
-            root={container}
-            name="James Warden"
-            content="Lorem ipsum dolor sit amet consectetur adipisicing elit, dolor sit amet consectetur adipisicing elit."
-            position="VP Product Development, TaxPal"
-            image="https://images.pexels.com/photos/10276340/pexels-photo-10276340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          />
-          <TestimonialCard
-            root={container}
-            name="Tim Yards"
-            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, adipisci! Saepe velit dignissimos laboriosam aspernatur."
-            position="VP of Human Resources, Protocol"
-            image="https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          />
-          <TestimonialCard
-            root={container}
-            name="Amy chase"
-            content="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-            position="Head of Marketting, TaxPal"
-            image="https://images.pexels.com/photos/2448531/pexels-photo-2448531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          />
-        </div>
+          {Array(10)
+            .fill(0)
+            .map((_, idx) => (
+              <TestimonialCard
+                key={idx}
+                ref={(el) => {
+                  itemRefs.current[idx] = el;
+                }}
+                root={containerRef}
+                getItemPosition={() => getItemPosition(idx)}
+                name={`Tim Yards ${idx}`}
+                content="Thanks to BarelyHR, we're now finding a new candidates that we never would have found with our previous methods."
+                position="VP of Human Resources, Protocol"
+                image="https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              />
 
-        <div className="mx-auto mt-16 w-full max-w-screen-xl px-5 lg:px-0">
+              /* 
+              <TestimonialCard
+                  root={container}
+                  name="Tim Yards"
+                  content="Thanks to BarelyHR, we're now finding a new candidates that we never would have found with our previous methods."
+                  position="VP of Human Resources, Protocol"
+                  image="https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                />
+                <TestimonialCard
+                  root={container}
+                  name="Amy chase"
+                  content="BarelyHR made onboarding our new remote employees a breeze."
+                  position="Head of Marketting, TaxPal"
+                  image="https://images.pexels.com/photos/2448531/pexels-photo-2448531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                />
+                <TestimonialCard
+                  root={container}
+                  name="James Warden"
+                  content="Lorem ipsum dolor sit amet consectetur adipisicing elit, dolor sit amet consectetur adipisicing elit."
+                  position="VP Product Development, TaxPal"
+                  image="https://images.pexels.com/photos/10276340/pexels-photo-10276340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                />
+              */
+            ))}
+        </motion.div>
+
+        <div className="mx-auto mt-16 w-full max-w-screen-xl px-5 xl:px-0">
           <div className="flex justify-between">
             <div className="">
               <p className="max-w-sm text-sm/7 text-gray-600">
@@ -272,52 +312,61 @@ interface ITestimonialCard extends ComponentProps<"div"> {
   content: string;
   name: string;
   position: string;
-  root: RefObject<Element>;
+  root: RefObject<HTMLElement>;
+  getItemPosition: () => number | null;
 }
 
-const TestimonialCard = ({
-  image,
-  content,
-  name,
-  position,
-  root,
-}: ITestimonialCard) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { root, amount: 0.7 });
+const TestimonialCard = forwardRef<HTMLDivElement, ITestimonialCard>(
+  ({ image, content, name, position, root, getItemPosition }, ref) => {
+    const { scrollX } = useScroll({ container: root });
+    const [_, forceRender] = useState(false);
+    const d = useMotionValue(getItemPosition() || 0);
+    const opacity = useTransform(d, [0, 500], [0.5, 1]);
 
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 1 }}
-      animate={{ opacity: isInView ? 1 : 0.5 }}
-      className={`relative m-1 flex aspect-[3/4] w-full flex-shrink-0 snap-normal overflow-hidden rounded-3xl bg-gray-950 ring-1 ring-gray-950/10 sm:w-96`}
-    >
-      <div className="relative w-full sm:h-96 sm:w-96">
-        <Image
-          fill
-          className="aspect-square object-cover [mask-image:linear-gradient(rgb(3_8_7),transparent)]"
-          src={image}
-          alt={`Image of ${name}`}
-        />
-      </div>
+    useEffect(() => {
+      forceRender(true);
+      d.set(getItemPosition() || 0);
+    }, []);
 
-      <figure className="absolute inset-x-0 bottom-0">
-        <blockquote className="px-5 sm:px-10">
-          <p className="relative w-full text-base/7 text-white before:absolute before:-left-[1ch] before:content-['“'] md:text-xl/7">
-            {content} ”
-          </p>
-        </blockquote>
+    useEffect(() => {
+      scrollX.on("change", (v) => {
+        d.set(getItemPosition() || 0);
+      });
+    }, [scrollX]);
 
-        <figcaption className="mt-5 border-t border-white/20 px-5 pb-5 pt-5 sm:bg-gray-950 sm:px-10 sm:pb-10">
-          <p className="text-sm/6 text-white">{name}</p>
-          <p className="bg-gradient-to-r from-[#FFF1BE] from-[28%] via-[#EE87CB] via-[70%] to-[#b060FF] bg-clip-text text-sm/6 font-medium text-transparent">
-            {position}
-          </p>
-        </figcaption>
-      </figure>
-    </motion.div>
-  );
-};
+    return (
+      <motion.div
+        ref={ref}
+        style={{ opacity }}
+        className={`item relative m-1 flex aspect-[3/4] w-full flex-shrink-0 snap-center overflow-hidden rounded-3xl bg-gray-950 ring-1 ring-gray-950/10 sm:w-96`}
+      >
+        <div className="relative w-full sm:h-96 sm:w-96">
+          <Image
+            fill
+            className="aspect-square object-cover [mask-image:linear-gradient(rgb(3_8_7),transparent)]"
+            src={image}
+            alt={`Image of ${name}`}
+          />
+        </div>
+
+        <figure className="absolute inset-x-0 bottom-0">
+          <blockquote className="px-5 sm:px-10">
+            <p className="relative w-full text-base/7 text-white before:absolute before:-left-[1ch] before:content-['“'] md:text-xl/7">
+              {content} ”
+            </p>
+          </blockquote>
+
+          <figcaption className="mt-5 border-t border-white/20 px-5 pb-5 pt-5 sm:bg-gray-950 sm:px-10 sm:pb-10">
+            <p className="text-sm/6 text-white">{name}</p>
+            <p className="bg-gradient-to-r from-[#FFF1BE] from-[28%] via-[#EE87CB] via-[70%] to-[#b060FF] bg-clip-text text-sm/6 font-medium text-transparent">
+              {position}
+            </p>
+          </figcaption>
+        </figure>
+      </motion.div>
+    );
+  },
+);
 
 interface IContainerWithPlusCorner extends ComponentProps<"div"> {
   children: ReactNode;
