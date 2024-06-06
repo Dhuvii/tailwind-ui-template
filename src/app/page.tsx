@@ -203,7 +203,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           ref={containerRef}
-          className="mt-5 flex snap-x snap-mandatory gap-8 overflow-x-auto overscroll-x-contain px-5 [--scroll-padding:calc((100vw-1280px)/2)] xl:px-[var(--scroll-padding)]"
+          className="scroll mt-5 flex snap-x snap-mandatory gap-8 overflow-x-auto overscroll-x-contain px-5 [--scroll-padding:calc((100vw-1280px)/2)] [scrollbar-width:none] xl:px-[var(--scroll-padding)]"
         >
           {Array(10)
             .fill(0)
