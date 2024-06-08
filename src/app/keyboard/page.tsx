@@ -753,7 +753,7 @@ const page = () => {
           </Key>
 
           <Key
-            className="height-16 w-[5.4rem] shadow-md shadow-blue-400 ring-blue-500"
+            className="w-[5.5rem] shadow-md shadow-blue-400 ring-blue-500"
             variant={"empty"}
           >
             {({ baseClass, subTextClass }) => (
@@ -771,7 +771,13 @@ const page = () => {
                   </svg>
                 </div>
 
-                <div className={cn(baseClass, subTextClass, "bottom-0 left-0")}>
+                <div
+                  className={cn(
+                    baseClass,
+                    subTextClass,
+                    "inset-x-0 bottom-0 text-center",
+                  )}
+                >
                   command
                 </div>
               </>
@@ -780,7 +786,7 @@ const page = () => {
 
           <Key variant={"empty"} className="w-96" />
 
-          <Key className="w-[5.4rem]" variant={"empty"}>
+          <Key className="w-[5.5rem]" variant={"empty"}>
             {({ baseClass, subTextClass }) => (
               <>
                 <div className={cn(baseClass, "left-0 top-0")}>
@@ -796,7 +802,13 @@ const page = () => {
                   </svg>
                 </div>
 
-                <div className={cn(baseClass, subTextClass, "bottom-0 left-0")}>
+                <div
+                  className={cn(
+                    baseClass,
+                    subTextClass,
+                    "inset-x-0 bottom-0 text-center",
+                  )}
+                >
                   command
                 </div>
               </>
