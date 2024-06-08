@@ -1,13 +1,13 @@
 import { cn } from "@/utils/cn";
-import Key from "../components/Key";
+import { FunctionKey, Key } from "../components/Key";
 
 const page = () => {
   return (
     <section className="flex min-h-[100dvh] w-full items-center justify-center">
-      <div className="rounded-[calc(1.5rem+0.75rem)] p-3 ring-2 ring-gray-800/30">
+      <div className="space-y-4 rounded-[calc(1.5rem+0.75rem)] p-3 ring-2 ring-gray-800/30">
         {/* row 1 */}
         <div className="flex w-full items-center justify-start gap-4">
-          <Key variant={"empty"} className="w-28 rounded-tl-3xl">
+          <Key className="relative w-28 rounded-tl-3xl">
             {({ baseClass, subTextClass }) => (
               <div className={cn(baseClass, "bottom-0 left-0")}>
                 <p className={cn(subTextClass)}>esc</p>
@@ -15,11 +15,11 @@ const page = () => {
             )}
           </Key>
 
-          <Key
-            Icon={({ baseClass }) => (
+          <FunctionKey
+            Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={cn(baseClass)}
+                className={cn(iconClass)}
                 viewBox="0 0 256 256"
               >
                 <path
@@ -30,13 +30,13 @@ const page = () => {
             )}
           >
             F1
-          </Key>
+          </FunctionKey>
 
-          <Key
-            Icon={({ baseClass }) => (
+          <FunctionKey
+            Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={cn(baseClass)}
+                className={cn(iconClass)}
                 viewBox="0 0 256 256"
               >
                 <path
@@ -47,13 +47,13 @@ const page = () => {
             )}
           >
             F2
-          </Key>
+          </FunctionKey>
 
-          <Key
-            Icon={({ baseClass }) => (
+          <FunctionKey
+            Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={cn(baseClass)}
+                className={cn(iconClass)}
                 viewBox="0 0 256 256"
               >
                 <path
@@ -64,13 +64,13 @@ const page = () => {
             )}
           >
             F3
-          </Key>
+          </FunctionKey>
 
-          <Key
-            Icon={({ baseClass }) => (
+          <FunctionKey
+            Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={cn(baseClass)}
+                className={cn(iconClass)}
                 viewBox="0 0 256 256"
               >
                 <path
@@ -81,13 +81,13 @@ const page = () => {
             )}
           >
             F4
-          </Key>
+          </FunctionKey>
 
-          <Key
-            Icon={({ baseClass }) => (
+          <FunctionKey
+            Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={cn(baseClass)}
+                className={cn(iconClass)}
                 viewBox="0 0 256 256"
               >
                 <path
@@ -98,13 +98,13 @@ const page = () => {
             )}
           >
             F5
-          </Key>
+          </FunctionKey>
 
-          <Key
-            Icon={({ baseClass }) => (
+          <FunctionKey
+            Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={cn(baseClass)}
+                className={cn(iconClass)}
                 viewBox="0 0 256 256"
               >
                 <path
@@ -115,13 +115,13 @@ const page = () => {
             )}
           >
             F6
-          </Key>
+          </FunctionKey>
 
-          <Key
-            Icon={({ baseClass }) => (
+          <FunctionKey
+            Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={cn(baseClass)}
+                className={cn(iconClass)}
                 viewBox="0 0 16 16"
               >
                 <path
@@ -132,13 +132,13 @@ const page = () => {
             )}
           >
             F7
-          </Key>
+          </FunctionKey>
 
-          <Key
-            Icon={({ baseClass }) => (
+          <FunctionKey
+            Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={cn(baseClass)}
+                className={cn(iconClass)}
                 viewBox="0 0 256 256"
               >
                 <path
@@ -149,13 +149,13 @@ const page = () => {
             )}
           >
             F8
-          </Key>
+          </FunctionKey>
 
-          <Key
-            Icon={({ baseClass }) => (
+          <FunctionKey
+            Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={cn(baseClass)}
+                className={cn(iconClass)}
                 viewBox="0 0 16 16"
               >
                 <path
@@ -166,13 +166,13 @@ const page = () => {
             )}
           >
             F9
-          </Key>
+          </FunctionKey>
 
-          <Key
-            Icon={({ baseClass }) => (
+          <FunctionKey
+            Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={cn(baseClass)}
+                className={cn(iconClass)}
                 viewBox="0 0 256 256"
               >
                 <path
@@ -183,13 +183,13 @@ const page = () => {
             )}
           >
             F10
-          </Key>
+          </FunctionKey>
 
-          <Key
-            Icon={({ baseClass }) => (
+          <FunctionKey
+            Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={cn(baseClass)}
+                className={cn(iconClass)}
                 viewBox="0 0 256 256"
               >
                 <path
@@ -200,13 +200,13 @@ const page = () => {
             )}
           >
             F11
-          </Key>
+          </FunctionKey>
 
-          <Key
-            Icon={({ baseClass }) => (
+          <FunctionKey
+            Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={cn(baseClass)}
+                className={cn(iconClass)}
                 viewBox="0 0 256 256"
               >
                 <path
@@ -217,14 +217,14 @@ const page = () => {
             )}
           >
             F12
-          </Key>
+          </FunctionKey>
 
-          <Key variant={"empty"} className="w-16 rounded-tr-3xl">
+          <Key className="relative rounded-tr-3xl">
             {({ baseClass }) => (
               <div
                 className={cn(
                   baseClass,
-                  "inset-0 rounded-full bg-gray-100 ring-[1.2px] ring-black/10",
+                  "absolute inset-0 rounded-full bg-gray-100 ring-[1.2px] ring-black/10",
                 )}
               ></div>
             )}
@@ -233,127 +233,192 @@ const page = () => {
         {/* row 1 */}
 
         {/* row 2 */}
-        <div className="mt-4 flex w-full items-center justify-start gap-4">
-          <Key variant={"empty"}>
-            {({ subTextClass }) => (
-              <div className="flex flex-col items-center justify-center text-gray-600">
-                <p>~</p>
-                <p className={cn(subTextClass, "mt-2 text-base")}>`</p>
+        <div className="flex w-full items-center justify-start gap-4">
+          <Key>
+            {({ subTextClass, mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
+                <p className={cn(subTextClass)}>~</p>
+                <p className={cn(mainTextClass, "mt-3")}>`</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ subTextClass }) => (
-              <div className="flex flex-col items-center justify-center text-gray-600">
-                <p>!</p>
-                <p className={cn(subTextClass, "mt-1 text-base")}>1</p>
+          <Key>
+            {({ subTextClass, mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
+                <p className={cn(subTextClass)}>!</p>
+                <p className={cn(mainTextClass, "mt-3")}>1</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ subTextClass }) => (
-              <div className="flex flex-col items-center justify-center text-gray-600">
-                <p>@</p>
-                <p className={cn(subTextClass, "mt-1 text-base")}>2</p>
+          <Key>
+            {({ subTextClass, mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
+                <p className={cn(subTextClass)}>@</p>
+                <p className={cn(mainTextClass, "mt-3")}>2</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ subTextClass }) => (
-              <div className="flex flex-col items-center justify-center text-gray-600">
-                <p>#</p>
-                <p className={cn(subTextClass, "mt-1 text-base")}>3</p>
+          <Key>
+            {({ subTextClass, mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
+                <p className={cn(subTextClass)}>#</p>
+                <p className={cn(mainTextClass, "mt-3")}>3</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ subTextClass }) => (
-              <div className="flex flex-col items-center justify-center text-gray-600">
-                <p>$</p>
-                <p className={cn(subTextClass, "mt-1 text-base")}>4</p>
+          <Key>
+            {({ subTextClass, mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
+                <p className={cn(subTextClass)}>$</p>
+                <p className={cn(mainTextClass, "mt-3")}>4</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ subTextClass }) => (
-              <div className="flex flex-col items-center justify-center text-gray-600">
-                <p>%</p>
-                <p className={cn(subTextClass, "mt-1 text-base")}>5</p>
+          <Key>
+            {({ subTextClass, mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
+                <p className={cn(subTextClass)}>%</p>
+                <p className={cn(mainTextClass, "mt-3")}>5</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ subTextClass }) => (
-              <div className="flex flex-col items-center justify-center text-gray-600">
-                <p>^</p>
-                <p className={cn(subTextClass, "mt-1 text-base")}>6</p>
+          <Key>
+            {({ subTextClass, mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
+                <p className={cn(subTextClass)}>^</p>
+                <p className={cn(mainTextClass, "mt-3")}>6</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ subTextClass }) => (
-              <div className="flex flex-col items-center justify-center text-gray-600">
-                <p>&</p>
-                <p className={cn(subTextClass, "mt-1 text-base")}>7</p>
+          <Key>
+            {({ subTextClass, mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
+                <p className={cn(subTextClass)}>&</p>
+                <p className={cn(mainTextClass, "mt-3")}>7</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ subTextClass }) => (
-              <div className="flex flex-col items-center justify-center text-gray-600">
-                <p>*</p>
-                <p className={cn(subTextClass, "mt-1 text-base")}>8</p>
+          <Key>
+            {({ subTextClass, mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
+                <p className={cn(subTextClass)}>*</p>
+                <p className={cn(mainTextClass, "mt-3")}>8</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ subTextClass }) => (
-              <div className="flex flex-col items-center justify-center text-gray-600">
-                <p>(</p>
-                <p className={cn(subTextClass, "mt-1 text-base")}>9</p>
+          <Key>
+            {({ subTextClass, mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
+                <p className={cn(subTextClass)}>(</p>
+                <p className={cn(mainTextClass, "mt-3")}>9</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ subTextClass }) => (
-              <div className="flex flex-col items-center justify-center text-gray-600">
-                <p>)</p>
-                <p className={cn(subTextClass, "mt-1 text-base")}>0</p>
+          <Key>
+            {({ subTextClass, mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
+                <p className={cn(subTextClass)}>)</p>
+                <p className={cn(mainTextClass, "mt-3")}>0</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ subTextClass }) => (
-              <div className="flex flex-col items-center justify-center text-gray-600">
-                <p>-</p>
-                <p className={cn(subTextClass, "mt-1 text-base")}>_</p>
+          <Key>
+            {({ subTextClass, mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
+                <p className={cn(subTextClass)}>__</p>
+                <p className={cn(mainTextClass, "mt-3")}>-</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ subTextClass }) => (
-              <div className="flex flex-col items-center justify-center text-gray-600">
-                <p>+</p>
-                <p className={cn(subTextClass, "mt-1 text-base")}>=</p>
+          <Key>
+            {({ subTextClass, mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
+                <p className={cn(subTextClass)}>+</p>
+                <p className={cn(mainTextClass, "mt-3")}>=</p>
               </div>
             )}
           </Key>
 
-          <Key className="w-28" variant={"empty"}>
+          <Key className="relative w-28">
             {({ baseClass, subTextClass }) => (
-              <div className={cn(baseClass, "bottom-0 right-0")}>
+              <div className={cn(baseClass, "absolute bottom-0 right-0")}>
                 <p className={cn(subTextClass)}>delete</p>
               </div>
             )}
@@ -362,96 +427,111 @@ const page = () => {
         {/* row 2 */}
 
         {/* row 3 */}
-        <div className="mt-4 flex w-full items-center justify-start gap-4">
-          <Key className="w-28" variant={"empty"}>
+        <div className="flex w-full items-center justify-start gap-4">
+          <Key className="relative w-28">
             {({ baseClass, subTextClass }) => (
-              <div className={cn(baseClass, "bottom-0 left-0")}>
+              <div className={cn(baseClass, "absolute bottom-0 left-0")}>
                 <p className={cn(subTextClass)}>tab</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>Q</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>Q</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>W</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>W</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>E</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>E</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>R</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>R</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>T</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>T</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>Y</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>Y</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>U</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>U</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>I</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>I</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>O</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>O</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>P</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>P</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <div className="flex flex-col items-center justify-center">
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
                 <p className={cn(mainTextClass, "text-lg")}>{"{"}</p>
                 <p className={cn(mainTextClass, "text-lg")}>{"["}</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <div className="flex flex-col items-center justify-center">
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
                 <p className={cn(mainTextClass, "text-lg")}>{"}"}</p>
                 <p className={cn(mainTextClass, "text-lg")}>{"]"}</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <div className="flex flex-col items-center justify-center">
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
                 <p className={cn(mainTextClass, "text-lg")}>{"|"}</p>
                 <p className={cn(mainTextClass, "text-lg")}>{"\\"}</p>
               </div>
@@ -461,98 +541,105 @@ const page = () => {
         {/* row 3 */}
 
         {/* row 4 */}
-        <div className="mt-4 flex w-full items-center justify-start gap-4">
-          <Key className="w-32" variant={"empty"}>
+        <div className="flex w-full items-center justify-start gap-4">
+          <Key className="relative w-32">
             {({ baseClass, subTextClass }) => (
               <>
-                <div className={cn(baseClass, "left-0 top-0")}>
+                <div className={cn(baseClass, "absolute left-0 top-0")}>
                   <div className="size-1.5 rounded-full bg-green-400"></div>
                 </div>
-                <div className={cn(baseClass, "bottom-0 left-0")}>
+                <div className={cn(baseClass, "absolute bottom-0 left-0")}>
                   <p className={cn(subTextClass)}>caps lock</p>
                 </div>
               </>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>A</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>A</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>S</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>S</p>
             )}
           </Key>
 
-          <Key
-            variant={"empty"}
-            className="shadow-md shadow-blue-400 ring-blue-500"
-          >
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>D</p>
+          <Key className="shadow-md shadow-blue-400 ring-blue-500">
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>D</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>F</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>F</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>G</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>G</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>H</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>H</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>J</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>J</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>K</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>K</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>L</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>L</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <div className="flex flex-col items-center justify-center">
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
                 <p className={cn(mainTextClass, "text-lg")}>{":"}</p>
                 <p className={cn(mainTextClass, "text-lg")}>{";"}</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <div className="flex flex-col items-center justify-center">
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
                 <p className={cn(mainTextClass, "text-lg")}>{'"'}</p>
                 <p className={cn(mainTextClass, "text-lg")}>{"'"}</p>
               </div>
             )}
           </Key>
 
-          <Key className="w-32" variant={"empty"}>
+          <Key className="relative w-32">
             {({ baseClass, subTextClass }) => (
-              <div className={cn(baseClass, "bottom-0 right-0")}>
+              <div className={cn(baseClass, "absolute bottom-0 right-0")}>
                 <p className={cn(subTextClass)}>return</p>
               </div>
             )}
@@ -561,90 +648,102 @@ const page = () => {
         {/* row 4 */}
 
         {/* row 5 */}
-        <div className="mt-4 flex w-full items-center justify-start gap-4">
-          <Key
-            className="w-[10.5rem] shadow-md shadow-blue-400 ring-blue-500"
-            variant={"empty"}
-          >
+        <div className="flex w-full items-center justify-start gap-4">
+          <Key className="relative w-[10.5rem] shadow-md shadow-blue-400 ring-blue-500">
             {({ baseClass, subTextClass }) => (
-              <div className={cn(baseClass, "bottom-0 left-0")}>
+              <div className={cn(baseClass, "absolute bottom-0 left-0")}>
                 <p className={cn(subTextClass)}>shift</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>Z</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>Z</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>X</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>X</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>C</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>C</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>V</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>V</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>B</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>B</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>N</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>N</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <p className={cn(mainTextClass, "text-xl")}>M</p>
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <p className={cn(baseClass, mainTextClass)}>M</p>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <div className="flex flex-col items-center justify-center">
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
                 <p className={cn(mainTextClass, "text-lg")}>{"<"}</p>
                 <p className={cn(mainTextClass, "text-lg")}>{","}</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <div className="flex flex-col items-center justify-center">
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
                 <p className={cn(mainTextClass, "text-lg")}>{">"}</p>
                 <p className={cn(mainTextClass, "text-lg")}>{"."}</p>
               </div>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ mainTextClass }) => (
-              <div className="flex flex-col items-center justify-center">
+          <Key>
+            {({ mainTextClass, baseClass }) => (
+              <div
+                className={cn(
+                  baseClass,
+                  "flex flex-col items-center justify-center",
+                )}
+              >
                 <p className={cn(mainTextClass, "text-lg")}>{"?"}</p>
                 <p className={cn(mainTextClass, "text-lg")}>{"/"}</p>
               </div>
             )}
           </Key>
 
-          <Key className="w-[10.5rem]" variant={"empty"}>
+          <Key className="relative w-[10.5rem]">
             {({ baseClass, subTextClass }) => (
-              <div className={cn(baseClass, "bottom-0 right-0")}>
+              <div className={cn(baseClass, "absolute bottom-0 right-0")}>
                 <p className={cn(subTextClass)}>shift</p>
               </div>
             )}
@@ -653,18 +752,24 @@ const page = () => {
         {/* row 5 */}
 
         {/* row 6 */}
-        <div className="mt-4 flex w-full items-center justify-start gap-4">
-          <Key variant={"empty"} className="rounded-bl-3xl">
-            {({ baseClass, subTextClass }) => (
+        <div className="flex w-full items-center justify-start gap-4">
+          <Key className="relative rounded-bl-3xl">
+            {({ baseClass, subTextClass, iconClass }) => (
               <>
-                <div className={cn(baseClass, subTextClass, "right-0 top-0")}>
+                <div
+                  className={cn(
+                    baseClass,
+                    subTextClass,
+                    "absolute right-0 top-0",
+                  )}
+                >
                   fn
                 </div>
 
-                <div className={cn(baseClass, "bottom-0 left-0")}>
+                <div className={cn(baseClass, "absolute bottom-0 left-0")}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="size-[1.2rem] text-gray-600"
+                    className={iconClass}
                     viewBox="0 0 512 512"
                   >
                     <path
@@ -702,13 +807,13 @@ const page = () => {
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ baseClass, subTextClass }) => (
+          <Key className="relative">
+            {({ baseClass, subTextClass, iconClass }) => (
               <>
-                <div className={cn(baseClass, "right-0 top-0")}>
+                <div className={cn(baseClass, "absolute right-0 top-0")}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="size-[1.2rem] text-gray-600"
+                    className={iconClass}
                     viewBox="0 0 512 512"
                   >
                     <path
@@ -722,20 +827,26 @@ const page = () => {
                   </svg>
                 </div>
 
-                <div className={cn(baseClass, subTextClass, "bottom-0 left-0")}>
+                <div
+                  className={cn(
+                    baseClass,
+                    subTextClass,
+                    "absolute inset-x-0 bottom-0 text-center",
+                  )}
+                >
                   control
                 </div>
               </>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ baseClass, subTextClass }) => (
+          <Key className="relative">
+            {({ baseClass, subTextClass, iconClass }) => (
               <>
-                <div className={cn(baseClass, "right-0 top-0")}>
+                <div className={cn(baseClass, "absolute right-0 top-0")}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="size-[1.2rem] text-gray-600"
+                    className={iconClass}
                     viewBox="0 0 256 256"
                   >
                     <path
@@ -745,23 +856,26 @@ const page = () => {
                   </svg>
                 </div>
 
-                <div className={cn(baseClass, subTextClass, "bottom-0 left-0")}>
+                <div
+                  className={cn(
+                    baseClass,
+                    subTextClass,
+                    "absolute inset-x-0 bottom-0 text-center",
+                  )}
+                >
                   option
                 </div>
               </>
             )}
           </Key>
 
-          <Key
-            className="w-[5.5rem] shadow-md shadow-blue-400 ring-blue-500"
-            variant={"empty"}
-          >
-            {({ baseClass, subTextClass }) => (
+          <Key className="relative w-[5.5rem] shadow-md shadow-blue-400 ring-blue-500">
+            {({ baseClass, subTextClass, iconClass }) => (
               <>
-                <div className={cn(baseClass, "right-0 top-0")}>
+                <div className={cn(baseClass, "absolute right-0 top-0")}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="size-[1.2rem] text-gray-600"
+                    className={iconClass}
                     viewBox="0 0 256 256"
                   >
                     <path
@@ -775,7 +889,7 @@ const page = () => {
                   className={cn(
                     baseClass,
                     subTextClass,
-                    "inset-x-0 bottom-0 text-center",
+                    "absolute inset-x-0 bottom-0 text-center",
                   )}
                 >
                   command
@@ -784,15 +898,15 @@ const page = () => {
             )}
           </Key>
 
-          <Key variant={"empty"} className="w-96" />
+          <Key className="w-96" />
 
-          <Key className="w-[5.5rem]" variant={"empty"}>
-            {({ baseClass, subTextClass }) => (
+          <Key className="relative w-[5.5rem]">
+            {({ baseClass, subTextClass, iconClass }) => (
               <>
-                <div className={cn(baseClass, "left-0 top-0")}>
+                <div className={cn(baseClass, "absolute left-0 top-0")}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="size-[1.2rem] text-gray-600"
+                    className={iconClass}
                     viewBox="0 0 256 256"
                   >
                     <path
@@ -806,7 +920,7 @@ const page = () => {
                   className={cn(
                     baseClass,
                     subTextClass,
-                    "inset-x-0 bottom-0 text-center",
+                    "absolute inset-x-0 bottom-0 text-center",
                   )}
                 >
                   command
@@ -815,13 +929,13 @@ const page = () => {
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ baseClass, subTextClass }) => (
+          <Key className="relative">
+            {({ baseClass, subTextClass, iconClass }) => (
               <>
-                <div className={cn(baseClass, "left-0 top-0")}>
+                <div className={cn(baseClass, "absolute left-0 top-0")}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="size-[1.2rem] text-gray-600"
+                    className={iconClass}
                     viewBox="0 0 256 256"
                   >
                     <path
@@ -831,19 +945,25 @@ const page = () => {
                   </svg>
                 </div>
 
-                <div className={cn(baseClass, subTextClass, "bottom-0 left-0")}>
+                <div
+                  className={cn(
+                    baseClass,
+                    subTextClass,
+                    "absolute inset-x-0 bottom-0 text-center",
+                  )}
+                >
                   option
                 </div>
               </>
             )}
           </Key>
 
-          <Key variant={"empty"}>
-            {({ baseClass, subTextClass }) => (
-              <div className={cn(baseClass)}>
+          <Key>
+            {({ iconClass, baseClass }) => (
+              <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="size-6 text-gray-600"
+                  className={cn(baseClass, iconClass)}
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -856,52 +976,37 @@ const page = () => {
           </Key>
 
           <div className="flex size-16 flex-col gap-[0.25rem]">
-            <Key
-              variant={"empty"}
-              className="rounded-b-none from-70% to-gray-400"
-            >
-              {({ baseClass }) => (
-                <div className={cn(baseClass)}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="size-6 text-gray-600"
-                    viewBox="0 0 24 24"
-                  >
-                    <path fill="currentColor" d="M7 14l5-5 5 5z" />
-                  </svg>
-                </div>
+            <Key className="rounded-b-none from-70% to-gray-400">
+              {({ iconClass }) => (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={cn(iconClass)}
+                  viewBox="0 0 24 24"
+                >
+                  <path fill="currentColor" d="M7 14l5-5 5 5z" />
+                </svg>
               )}
             </Key>
 
-            <Key
-              variant={"empty"}
-              className="rounded-t-none from-gray-300 to-white to-20%"
-            >
-              {({ baseClass }) => (
-                <div className={cn(baseClass)}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="size-6 text-gray-600"
-                    viewBox="0 0 24 24"
-                  >
-                    <path fill="currentColor" d="M12 15l-5-5h10z" />
-                  </svg>
-                </div>
+            <Key className="rounded-t-none from-gray-300 to-white to-20%">
+              {({ iconClass }) => (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={cn(iconClass)}
+                  viewBox="0 0 24 24"
+                >
+                  <path fill="currentColor" d="M12 15l-5-5h10z" />
+                </svg>
               )}
             </Key>
           </div>
 
-          <Key variant={"empty"} className="rounded-br-3xl">
-            {({ baseClass }) => (
-              <div
-                className={cn(
-                  baseClass,
-                  "inset-0 flex items-center justify-center",
-                )}
-              >
+          <Key className="rounded-br-3xl">
+            {({ baseClass, iconClass }) => (
+              <div className={cn(baseClass)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="size-6 text-gray-600"
+                  className={cn(baseClass, iconClass)}
                   viewBox="0 0 24 24"
                 >
                   <path fill="currentColor" d="M10 17V7l5 5z" />
