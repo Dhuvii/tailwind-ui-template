@@ -9,7 +9,7 @@ const page = () => {
         <div className="flex w-full items-center justify-start gap-4">
           <Key className="relative w-28 rounded-tl-3xl">
             {({ baseClass, subTextClass }) => (
-              <div className={cn(baseClass, "bottom-0 left-0")}>
+              <div className={cn(baseClass, "absolute bottom-0 left-0")}>
                 <p className={cn(subTextClass)}>esc</p>
               </div>
             )}
