@@ -975,8 +975,8 @@ const page = () => {
             )}
           </Key>
 
-          <div className="flex size-16 flex-col gap-[0.25rem]">
-            <Key className="rounded-b-none from-70% to-gray-400">
+          <div className="flex size-16 flex-col gap-1">
+            <Key className="h-auto flex-1 rounded-b-none from-70% to-gray-400">
               {({ iconClass }) => (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -988,7 +988,7 @@ const page = () => {
               )}
             </Key>
 
-            <Key className="rounded-t-none from-gray-300 to-white to-20%">
+            <Key className="h-auto flex-1 rounded-t-none from-gray-300 to-white to-20%">
               {({ iconClass }) => (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
