@@ -1,4 +1,4 @@
-import KandbanCard from "../components/KanbanCard";
+import KandbanCard from "@/app/components/KanbanCard";
 
 const applied = [
   {
@@ -53,7 +53,7 @@ const interview = [
 
 const page = () => {
   return (
-    <div className="h-screen p-10">
+    <div className="h-dvh p-10">
       <div className="flex h-full justify-start gap-3">
         {/* cards holder */}
         <div className="flex max-w-72 flex-1 flex-shrink-0 flex-col overflow-hidden rounded-xl bg-gray-100 pb-[0.3rem]">
@@ -74,7 +74,7 @@ const page = () => {
             ))}
 
             {/* add applicant card */}
-            <div className="flex h-[7rem] items-center justify-center rounded-lg border-2 border-dashed border-gray-950/10 bg-transparent p-4">
+            <div className="flex h-[7rem] flex-shrink-0 items-center justify-center rounded-lg border-2 border-dashed border-gray-950/10 bg-transparent p-4">
               <p className="text-sm text-gray-500">Add Applicant</p>
             </div>
             {/* add applicant card */}
@@ -102,7 +102,7 @@ const page = () => {
             ))}
 
             {/* add applicant card */}
-            <div className="flex h-[7rem] items-center justify-center rounded-lg border-2 border-dashed border-gray-950/10 bg-transparent p-4">
+            <div className="flex h-[7rem] flex-shrink-0 items-center justify-center rounded-lg border-2 border-dashed border-gray-950/10 bg-transparent p-4">
               <p className="text-sm text-gray-500">Add Applicant</p>
             </div>
             {/* add applicant card */}
@@ -130,7 +130,7 @@ const page = () => {
             ))}
 
             {/* add applicant card */}
-            <div className="flex h-[7rem] items-center justify-center rounded-lg border-2 border-dashed border-gray-950/10 bg-transparent p-4">
+            <div className="flex h-[7rem] flex-shrink-0 items-center justify-center rounded-lg border-2 border-dashed border-gray-950/10 bg-transparent p-4">
               <p className="text-sm text-gray-500">Add Applicant</p>
             </div>
             {/* add applicant card */}

@@ -13,7 +13,7 @@ import {
   useState,
 } from "react";
 import KandbanCard from "./components/KanbanCard";
-import { FunctionKey, Key } from "./components/Key";
+import { Key } from "./components/Key";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -165,18 +165,18 @@ export default function Home() {
 
             {/* CTA */}
             <div className="mt-12 flex w-full flex-col items-center gap-5 md:flex-row">
-              <a
+              <Link
                 href=""
                 className="w-full rounded-full bg-gray-950 px-4 py-3 text-center text-sm font-medium tracking-wide text-white shadow-md md:w-auto md:text-base/4"
               >
                 Get started
-              </a>
-              <a
+              </Link>
+              <Link
                 href=""
                 className="w-full rounded-full border border-white/25 bg-white/15 px-4 py-3 text-center text-sm font-medium tracking-wide text-gray-950 shadow-md ring ring-[#D15052]/5 md:w-auto md:text-base/4"
               >
                 Learn more
-              </a>
+              </Link>
             </div>
             {/* CTA */}
           </div>
@@ -975,7 +975,7 @@ const Keyboard = () => {
           )}
         </Key>
 
-        <FunctionKey
+        <Key.FunctionKey
           Icon={({ iconClass }) => (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -990,9 +990,9 @@ const Keyboard = () => {
           )}
         >
           F1
-        </FunctionKey>
+        </Key.FunctionKey>
 
-        <FunctionKey
+        <Key.FunctionKey
           Icon={({ iconClass }) => (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1007,9 +1007,9 @@ const Keyboard = () => {
           )}
         >
           F2
-        </FunctionKey>
+        </Key.FunctionKey>
 
-        <FunctionKey
+        <Key.FunctionKey
           Icon={({ iconClass }) => (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1024,9 +1024,9 @@ const Keyboard = () => {
           )}
         >
           F3
-        </FunctionKey>
+        </Key.FunctionKey>
 
-        <FunctionKey
+        <Key.FunctionKey
           Icon={({ iconClass }) => (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1041,9 +1041,9 @@ const Keyboard = () => {
           )}
         >
           F4
-        </FunctionKey>
+        </Key.FunctionKey>
 
-        <FunctionKey
+        <Key.FunctionKey
           Icon={({ iconClass }) => (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1058,9 +1058,9 @@ const Keyboard = () => {
           )}
         >
           F5
-        </FunctionKey>
+        </Key.FunctionKey>
 
-        <FunctionKey
+        <Key.FunctionKey
           Icon={({ iconClass }) => (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1075,9 +1075,9 @@ const Keyboard = () => {
           )}
         >
           F6
-        </FunctionKey>
+        </Key.FunctionKey>
 
-        <FunctionKey
+        <Key.FunctionKey
           Icon={({ iconClass }) => (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1092,9 +1092,9 @@ const Keyboard = () => {
           )}
         >
           F7
-        </FunctionKey>
+        </Key.FunctionKey>
 
-        <FunctionKey
+        <Key.FunctionKey
           Icon={({ iconClass }) => (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1109,9 +1109,9 @@ const Keyboard = () => {
           )}
         >
           F8
-        </FunctionKey>
+        </Key.FunctionKey>
 
-        <FunctionKey
+        <Key.FunctionKey
           Icon={({ iconClass }) => (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1126,9 +1126,9 @@ const Keyboard = () => {
           )}
         >
           F9
-        </FunctionKey>
+        </Key.FunctionKey>
 
-        <FunctionKey
+        <Key.FunctionKey
           Icon={({ iconClass }) => (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1143,9 +1143,9 @@ const Keyboard = () => {
           )}
         >
           F10
-        </FunctionKey>
+        </Key.FunctionKey>
 
-        <FunctionKey
+        <Key.FunctionKey
           Icon={({ iconClass }) => (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1160,9 +1160,9 @@ const Keyboard = () => {
           )}
         >
           F11
-        </FunctionKey>
+        </Key.FunctionKey>
 
-        <FunctionKey
+        <Key.FunctionKey
           Icon={({ iconClass }) => (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1177,7 +1177,7 @@ const Keyboard = () => {
           )}
         >
           F12
-        </FunctionKey>
+        </Key.FunctionKey>
 
         <Key className="relative rounded-tr-3xl">
           {({ baseClass }) => (

@@ -1,5 +1,5 @@
 import { cn } from "@/utils/cn";
-import { Key } from "../components/Key";
+import { Key } from "../../components/Key";
 
 const page = () => {
   return (
