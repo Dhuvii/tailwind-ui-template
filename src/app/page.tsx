@@ -44,6 +44,81 @@ export default function Home() {
     return null;
   };
 
+  const testimonials = [
+    {
+      name: "John Doe",
+      content:
+        "This service was fantastic! I couldn't be happier with the results.",
+      position: "CEO, Example Corp",
+      image:
+        "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+    {
+      name: "Jane Smith",
+      content: "Amazing experience, highly recommend to everyone.",
+      position: "Marketing Manager, Tech Solutions",
+      image:
+        "https://images.pexels.com/photos/2448531/pexels-photo-2448531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+    {
+      name: "Robert Johnson",
+      content: "The team was professional and exceeded our expectations.",
+      position: "Product Manager, Innovate Inc.",
+      image:
+        "https://images.pexels.com/photos/10276340/pexels-photo-10276340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+    {
+      name: "Emily Davis",
+      content: "Top-notch service from start to finish. Will use again!",
+      position: "HR Specialist, People First",
+      image:
+        "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+    {
+      name: "Michael Brown",
+      content: "Exceptional quality and great attention to detail.",
+      position: "Lead Developer, CodeWorks",
+      image:
+        "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+    {
+      name: "Jessica Wilson",
+      content: "Friendly staff and excellent support throughout the project.",
+      position: "Project Coordinator, BuildRight",
+      image:
+        "https://images.pexels.com/photos/2918513/pexels-photo-2918513.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+    {
+      name: "William Martinez",
+      content: "Delivered exactly what was promised, on time and on budget.",
+      position: "Operations Manager, Global Solutions",
+      image:
+        "https://images.pexels.com/photos/2340978/pexels-photo-2340978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+    {
+      name: "Olivia Anderson",
+      content: "Very satisfied with the results. Will definitely return!",
+      position: "Creative Director, DesignPro",
+      image:
+        "https://images.pexels.com/photos/3772510/pexels-photo-3772510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+    {
+      name: "David Thomas",
+      content: "Professional, efficient, and great communication.",
+      position: "Business Analyst, Future Insights",
+      image:
+        "https://images.pexels.com/photos/3778212/pexels-photo-3778212.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+    {
+      name: "Sophia Garcia",
+      content:
+        "Absolutely wonderful! Could not have asked for a better experience.",
+      position: "Sales Executive, Market Leaders",
+      image:
+        "https://images.pexels.com/photos/3775156/pexels-photo-3775156.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+  ];
+
   return (
     <main className="">
       {/* hero */}
@@ -339,46 +414,20 @@ export default function Home() {
           ref={containerRef}
           className="scroll mt-5 flex snap-x snap-mandatory gap-8 overflow-x-auto overscroll-x-contain px-5 [--scroll-padding:calc((100vw-1280px)/2)] [scrollbar-width:none] xl:px-[var(--scroll-padding)]"
         >
-          {Array(10)
-            .fill(0)
-            .map((_, idx) => (
-              <TestimonialCard
-                key={idx}
-                ref={(el) => {
-                  itemRefs.current[idx] = el;
-                }}
-                root={containerRef}
-                getItemPosition={() => getItemPosition(idx)}
-                name={`Tim Yards`}
-                content="Thanks to BarelyHR, we're now finding a new candidates that we never would have found with our previous methods."
-                position="VP of Human Resources, Protocol"
-                image="https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              />
-
-              /* 
-              <TestimonialCard
-                  root={container}
-                  name="Tim Yards"
-                  content="Thanks to BarelyHR, we're now finding a new candidates that we never would have found with our previous methods."
-                  position="VP of Human Resources, Protocol"
-                  image="https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                />
-                <TestimonialCard
-                  root={container}
-                  name="Amy chase"
-                  content="BarelyHR made onboarding our new remote employees a breeze."
-                  position="Head of Marketting, TaxPal"
-                  image="https://images.pexels.com/photos/2448531/pexels-photo-2448531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                />
-                <TestimonialCard
-                  root={container}
-                  name="James Warden"
-                  content="Lorem ipsum dolor sit amet consectetur adipisicing elit, dolor sit amet consectetur adipisicing elit."
-                  position="VP Product Development, TaxPal"
-                  image="https://images.pexels.com/photos/10276340/pexels-photo-10276340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                />
-              */
-            ))}
+          {testimonials.map(({ name, content, position, image }, idx) => (
+            <TestimonialCard
+              key={idx}
+              ref={(el) => {
+                itemRefs.current[idx] = el;
+              }}
+              root={containerRef}
+              getItemPosition={() => getItemPosition(idx)}
+              name={name}
+              content={content}
+              position={position}
+              image={image}
+            />
+          ))}
         </motion.div>
 
         <div className="mx-auto mt-16 w-full max-w-screen-xl px-5 xl:px-0">
