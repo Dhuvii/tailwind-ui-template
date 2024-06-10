@@ -2110,7 +2110,7 @@ const Source = () => {
 
 const Global = () => {
   return (
-    <div className="relative mx-auto h-[26rem] w-[26rem]">
+    <div className="relative mx-auto h-[32rem] w-[32rem] flex-shrink-0">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 100 125"
@@ -5376,7 +5376,7 @@ const Global = () => {
         <div className="absolute -bottom-[0.45rem] left-[calc(50%-(1.25rem/2))] size-5 rotate-45 border border-l-0 border-t-0 border-gray-950/10 bg-white shadow"></div>
       </div>
 
-      <div className="absolute right-[15%] top-[25%] size-14 rounded-full bg-white p-1 shadow ring-[1px] ring-gray-950/10">
+      <div className="absolute right-[25%] top-[25%] size-14 rounded-full bg-white p-1 shadow ring-[1px] ring-gray-950/10">
         <div className="relative z-10 h-full w-full overflow-hidden rounded-full">
           <Image
             fill
