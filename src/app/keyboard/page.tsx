@@ -1,5 +1,5 @@
 import { cn } from "@/utils/cn";
-import { FunctionKey, Key } from "../components/Key";
+import { Key } from "../components/Key";
 
 const page = () => {
   return (
@@ -15,7 +15,7 @@ const page = () => {
             )}
           </Key>
 
-          <FunctionKey
+          <Key.FunctionKey
             Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,9 +30,9 @@ const page = () => {
             )}
           >
             F1
-          </FunctionKey>
+          </Key.FunctionKey>
 
-          <FunctionKey
+          <Key.FunctionKey
             Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -47,9 +47,9 @@ const page = () => {
             )}
           >
             F2
-          </FunctionKey>
+          </Key.FunctionKey>
 
-          <FunctionKey
+          <Key.FunctionKey
             Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -64,9 +64,9 @@ const page = () => {
             )}
           >
             F3
-          </FunctionKey>
+          </Key.FunctionKey>
 
-          <FunctionKey
+          <Key.FunctionKey
             Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,9 +81,9 @@ const page = () => {
             )}
           >
             F4
-          </FunctionKey>
+          </Key.FunctionKey>
 
-          <FunctionKey
+          <Key.FunctionKey
             Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -98,9 +98,9 @@ const page = () => {
             )}
           >
             F5
-          </FunctionKey>
+          </Key.FunctionKey>
 
-          <FunctionKey
+          <Key.FunctionKey
             Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -115,9 +115,9 @@ const page = () => {
             )}
           >
             F6
-          </FunctionKey>
+          </Key.FunctionKey>
 
-          <FunctionKey
+          <Key.FunctionKey
             Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -132,9 +132,9 @@ const page = () => {
             )}
           >
             F7
-          </FunctionKey>
+          </Key.FunctionKey>
 
-          <FunctionKey
+          <Key.FunctionKey
             Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -149,9 +149,9 @@ const page = () => {
             )}
           >
             F8
-          </FunctionKey>
+          </Key.FunctionKey>
 
-          <FunctionKey
+          <Key.FunctionKey
             Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -166,9 +166,9 @@ const page = () => {
             )}
           >
             F9
-          </FunctionKey>
+          </Key.FunctionKey>
 
-          <FunctionKey
+          <Key.FunctionKey
             Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -183,9 +183,9 @@ const page = () => {
             )}
           >
             F10
-          </FunctionKey>
+          </Key.FunctionKey>
 
-          <FunctionKey
+          <Key.FunctionKey
             Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -200,9 +200,9 @@ const page = () => {
             )}
           >
             F11
-          </FunctionKey>
+          </Key.FunctionKey>
 
-          <FunctionKey
+          <Key.FunctionKey
             Icon={({ iconClass }) => (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -217,7 +217,7 @@ const page = () => {
             )}
           >
             F12
-          </FunctionKey>
+          </Key.FunctionKey>
 
           <Key className="relative rounded-tr-3xl">
             {({ baseClass }) => (

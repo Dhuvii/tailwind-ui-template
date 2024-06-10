@@ -9,7 +9,7 @@ const iconClass = "size-[1.2rem] flex-shrink-0";
 const subTextClass = "text-sm leading-none";
 const mainTextClass = "text-xl leading-none";
 
-type ChildrenProps = {
+type ChildProps = {
   baseClass: string;
   iconClass: string;
   subTextClass: string;
@@ -22,7 +22,7 @@ interface IFunctionKey extends ComponentProps<"div"> {
       React.HTMLAttributes<HTMLOrSVGElement>,
       HTMLOrSVGElement
     > &
-      ChildrenProps
+      ChildProps
   >;
 }
 
@@ -43,10 +43,10 @@ const FunctionKey = ({ className, Icon, children }: IFunctionKey) => {
 
 interface IKey {
   className?: string;
-  children?: (props: ChildrenProps) => React.ReactNode;
+  children?: (props: ChildProps) => React.ReactNode;
 }
 
-const Key = ({ className, children }: IKey) => {
+const _Key = ({ className, children }: IKey) => {
   return (
     <button className={cn(defaultStyles, className)}>
       {children &&
@@ -59,5 +59,4 @@ const Key = ({ className, children }: IKey) => {
     </button>
   );
 };
-
-export { FunctionKey, Key };
+export let Key = Object.assign(_Key, { FunctionKey });
