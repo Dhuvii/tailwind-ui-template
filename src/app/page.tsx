@@ -291,7 +291,7 @@ export default function Home() {
             {/* source */}
 
             {/* global */}
-            <div className="col-span-12 rounded-lg rounded-b-[2rem] bg-white shadow-sm ring-[1px] ring-gray-950/5 md:col-span-6 md:rounded-bl-none md:rounded-br-[2rem] xl:col-span-4">
+            <div className="col-span-12 rounded-lg rounded-b-[2rem] bg-white shadow-sm ring-[1px] ring-gray-950/5 md:col-span-6 md:rounded-bl-lg md:rounded-br-[2rem] xl:col-span-4">
               <div className="flex max-h-96 w-full items-center overflow-hidden [mask-image:linear-gradient(black_80%,transparent)]">
                 <Global />
               </div>
