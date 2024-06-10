@@ -185,7 +185,7 @@ export default function Home() {
       {/* hero */}
 
       {/* hiring */}
-      <section className="bg-gradient-to-b from-white from-50% to-gray-100 py-32">
+      <section className="bg-gradient-to-b from-white from-10% to-gray-100 py-32">
         <div className="mx-auto w-full max-w-screen-xl px-5 xl:px-0">
           <p className="font-mono text-xs/4 uppercase tracking-wider text-gray-500">
             hiring
@@ -199,7 +199,7 @@ export default function Home() {
         <div className="mx-auto mt-16 max-w-screen-xl px-5 xl:px-0">
           <div className="grid grid-cols-12 gap-4">
             {/* kanban */}
-            <div className="col-span-12 rounded-lg rounded-tl-[2rem] bg-white shadow-sm ring-[1px] ring-gray-950/5 md:col-span-6">
+            <div className="col-span-12 rounded-lg rounded-t-[2rem] bg-white shadow-sm ring-[1px] ring-gray-950/5 md:col-span-6 md:rounded-tl-[2rem] md:rounded-tr-lg">
               <div className="max-h-96 w-full overflow-hidden p-6 pr-0 [mask-image:linear-gradient(black_80%,transparent)]">
                 <Kanban />
               </div>
@@ -222,7 +222,7 @@ export default function Home() {
             {/* kanban */}
 
             {/* job posts */}
-            <div className="col-span-12 rounded-lg rounded-tr-[2rem] bg-white shadow-sm ring-[1px] ring-gray-950/5 md:col-span-6">
+            <div className="col-span-12 rounded-lg bg-white shadow-sm ring-[1px] ring-gray-950/5 md:col-span-6 md:rounded-tr-[2rem]">
               <div className="max-h-96 w-full overflow-hidden p-6 [mask-image:linear-gradient(black_80%,transparent)]">
                 <Posts />
               </div>
@@ -245,7 +245,7 @@ export default function Home() {
             {/* job posts */}
 
             {/* power user */}
-            <div className="col-span-12 overflow-hidden rounded-lg rounded-bl-[2rem] bg-white shadow-sm ring-[1px] ring-gray-950/5 xl:col-span-4">
+            <div className="col-span-12 overflow-hidden rounded-lg bg-white shadow-sm ring-[1px] ring-gray-950/5 xl:col-span-4 xl:rounded-bl-[2rem]">
               <div className="max-h-96 w-max overflow-hidden p-10">
                 <Keyboard />
               </div>
@@ -267,8 +267,8 @@ export default function Home() {
             </div>
             {/* power user */}
 
-            {/* reach */}
-            <div className="col-span-12 rounded-lg rounded-tr-[2rem] bg-white shadow-sm ring-[1px] ring-gray-950/5 md:col-span-6 xl:col-span-4">
+            {/* source */}
+            <div className="col-span-12 rounded-lg bg-white shadow-sm ring-[1px] ring-gray-950/5 md:col-span-6 md:rounded-bl-[2rem] xl:col-span-4 xl:rounded-bl-lg">
               <div className="max-h-96 w-full overflow-hidden [mask-image:linear-gradient(black_80%,transparent)]">
                 <Source />
               </div>
@@ -288,10 +288,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            {/* reach */}
+            {/* source */}
 
             {/* global */}
-            <div className="col-span-12 rounded-lg rounded-br-[2rem] bg-white shadow-sm ring-[1px] ring-gray-950/5 md:col-span-6 xl:col-span-4">
+            <div className="col-span-12 rounded-lg rounded-b-[2rem] bg-white shadow-sm ring-[1px] ring-gray-950/5 md:col-span-6 md:rounded-bl-none md:rounded-br-[2rem] xl:col-span-4">
               <div className="flex max-h-96 w-full items-center overflow-hidden [mask-image:linear-gradient(black_80%,transparent)]">
                 <Global />
               </div>
@@ -2603,7 +2603,7 @@ const Global = () => {
         <circle cx={46.307} cy={94.316} r={0.3} />
       </svg>
 
-      <div className="absolute right-60 top-12 size-14 rounded-full bg-white p-1 shadow ring-[1px] ring-gray-950/10">
+      <div className="absolute right-[55%] top-[5%] size-14 rounded-full bg-white p-1 shadow ring-[1px] ring-gray-950/10">
         <div className="relative z-10 h-full w-full overflow-hidden rounded-full">
           <Image
             fill
@@ -2618,7 +2618,7 @@ const Global = () => {
         <div className="absolute -bottom-[0.45rem] left-[calc(50%-(1.25rem/2))] size-5 rotate-45 border border-l-0 border-t-0 border-gray-950/10 bg-white shadow"></div>
       </div>
 
-      <div className="absolute left-32 top-[50%] size-14 rounded-full bg-white p-1 shadow ring-[1px] ring-gray-950/10">
+      <div className="absolute left-[25%] top-[50%] size-14 rounded-full bg-white p-1 shadow ring-[1px] ring-gray-950/10">
         <div className="relative z-10 h-full w-full overflow-hidden rounded-full">
           <Image
             fill
@@ -2633,7 +2633,7 @@ const Global = () => {
         <div className="absolute -bottom-[0.45rem] left-[calc(50%-(1.25rem/2))] size-5 rotate-45 border border-l-0 border-t-0 border-gray-950/10 bg-white shadow"></div>
       </div>
 
-      <div className="absolute right-32 top-[20%] size-14 rounded-full bg-white p-1 shadow ring-[1px] ring-gray-950/10">
+      <div className="absolute right-[35%] top-[20%] size-14 rounded-full bg-white p-1 shadow ring-[1px] ring-gray-950/10">
         <div className="relative z-10 h-full w-full overflow-hidden rounded-full">
           <Image
             fill
@@ -2648,7 +2648,7 @@ const Global = () => {
         <div className="absolute -bottom-[0.45rem] left-[calc(50%-(1.25rem/2))] size-5 rotate-45 border border-l-0 border-t-0 border-gray-950/10 bg-white shadow"></div>
       </div>
 
-      <div className="absolute right-44 top-[70%] size-14 rounded-full bg-white p-1 shadow ring-[1px] ring-gray-950/10">
+      <div className="absolute right-[45%] top-[70%] size-14 rounded-full bg-white p-1 shadow ring-[1px] ring-gray-950/10">
         <div className="relative z-10 h-full w-full overflow-hidden rounded-full">
           <Image
             fill
