@@ -338,11 +338,11 @@ export default function Home() {
           <div className="mx-auto my-16 w-full max-w-screen-xl">
             <div className="grid grid-cols-12 gap-4">
               {/* training */}
-              <div className="col-span-8 overflow-hidden rounded-lg rounded-tl-[2rem] bg-[#1D2A39] ring-[1px] ring-white/15">
-                <div className="w-full pl-5 pt-5 [mask-image:linear-gradient(transparent,black_20%,black_80%,transparent)]">
+              <div className="col-span-12 overflow-hidden rounded-lg rounded-tl-[2rem] rounded-tr-[2rem] bg-[#1D2A39] ring-[1px] ring-white/15 md:col-span-6 md:rounded-tr-lg xl:col-span-8">
+                <div className="h-96 w-[68rem] pl-5 pt-5">
                   <div className="flex flex-shrink-0 items-start justify-start gap-10">
                     {/* left */}
-                    <div className="w-72 border-l border-white/15 pl-5">
+                    <div className="w-72 border-x border-white/15 px-5 [mask-image:linear-gradient(transparent,black_10%,black_90%,transparent)]">
                       <p className="truncate text-sm font-medium text-gray-400">
                         Introduction
                       </p>
@@ -384,6 +384,55 @@ export default function Home() {
                     {/* left */}
 
                     {/* right */}
+                    <div className="relative z-20 w-full pl-5 pt-3 [mask-image:linear-gradient(transparent,black_10%)]">
+                      <p className="font-mono text-xs/4 uppercase tracking-[0.2em] text-gray-300">
+                        Introduction
+                      </p>
+
+                      <h2 className="mt-1 text-2xl font-medium tracking-tighter text-white">
+                        Importance of Safety in the Workplace
+                      </h2>
+
+                      <p className="mt-3 max-w-xl text-sm/6 text-gray-500">
+                        To understand the significance of workplace safety and
+                        its impact on ensuring organization as a whole.
+                      </p>
+
+                      <div className="mt-10 flex w-full border-t border-white/15">
+                        <div className="w-full border-r border-white/15 pt-5">
+                          <p className="font-mono text-xs/4 uppercase tracking-[0.15em] text-gray-300">
+                            Duration
+                          </p>
+
+                          <p className="mt-1 text-sm/6 font-medium text-white">
+                            20m
+                          </p>
+                        </div>
+
+                        <div className="w-full border-r border-white/15 pl-5 pt-5">
+                          <p className="font-mono text-xs/4 uppercase tracking-[0.15em] text-gray-300">
+                            Last updated
+                          </p>
+
+                          <p className="mt-1 text-sm/6 text-white">
+                            March 15, 2024
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-10">
+                        <div className="relative h-60 w-full overflow-hidden rounded-2xl [mask-image:linear-gradient(black,transparent_30%)]">
+                          <Image
+                            fill
+                            src={
+                              "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            }
+                            className="w-full object-cover"
+                            alt="Video Poster"
+                          />
+                        </div>
+                      </div>
+                    </div>
                     {/* right */}
                   </div>
                 </div>
@@ -407,7 +456,310 @@ export default function Home() {
               {/* training */}
 
               {/* interogations */}
-              <div className="col-span-4"></div>
+              <div className="col-span-12 overflow-hidden rounded-lg rounded-tr-lg bg-[#1D2A39] ring-[1px] ring-white/15 md:col-span-6 md:rounded-tr-[2rem] xl:col-span-4">
+                <div className="relative h-96 w-full overflow-hidden pt-5">
+                  {/* center cube */}
+                  <div className="absolute left-1/2 top-1/2 z-20 -translate-x-[50%] -translate-y-[50%]">
+                    <div className="overflow-hidden rounded-2xl bg-gradient-to-b from-white/30 to-white/5 p-1.5 ring-[1px] ring-white/15 backdrop-blur-sm">
+                      <div className="flex items-center justify-center rounded-[calc(1rem-0.375rem)] border border-white/10 p-8 text-white">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          className="size-9"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  {/* center cube */}
+
+                  <div className="relative flex w-full items-center justify-center whitespace-nowrap">
+                    <HorizontalDots className="text-white/15" />
+                    <div className="absolute left-20 rounded-full bg-gradient-to-b from-[#303D4B] to-[#1F2C3B] px-3 py-1.5 ring-[1px] ring-inset ring-white/15">
+                      <div className="flex items-center justify-start gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 256 193"
+                        >
+                          <path
+                            fill="#4285f4"
+                            d="M58.182 192.05V93.14L27.507 65.077 0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455z"
+                          />
+                          <path
+                            fill="#34a853"
+                            d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837-27.026 25.798z"
+                          />
+                          <path
+                            fill="#ea4335"
+                            d="M58.182 93.14l-4.174-38.647 4.174-36.989L128 69.868l69.818-52.364 4.669 34.992-4.669 40.644L128 145.504z"
+                          />
+                          <path
+                            fill="#fbbc04"
+                            d="M197.818 17.504V93.14L256 49.504V26.231c0-21.585-24.64-33.89-41.89-20.945z"
+                          />
+                          <path
+                            fill="#c5221f"
+                            d="M0 49.504l26.759 20.07L58.182 93.14V17.504L41.89 5.286C24.61-7.66 0 4.646 0 26.23z"
+                          />
+                        </svg>
+                        <p className="text-sm/6 text-gray-300">Gmail</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <HorizontalDots className="text-white/5" />
+
+                  <div className="relative flex w-full items-center justify-center whitespace-nowrap">
+                    <HorizontalDots className="text-white/15" />
+                    <div className="absolute right-8 rounded-full bg-gradient-to-b from-[#303D4B] to-[#1F2C3B] px-3 py-1.5 ring-[1px] ring-inset ring-white/15">
+                      <div className="flex items-center justify-start gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 256 239"
+                        >
+                          <defs>
+                            <linearGradient
+                              id="b"
+                              x1="17.372%"
+                              x2="82.628%"
+                              y1="-6.51%"
+                              y2="106.51%"
+                            >
+                              <stop offset="0%" stopColor="#5a62c3" />
+                              <stop offset="50%" stopColor="#4d55bd" />
+                              <stop offset="100%" stopColor="#3940ab" />
+                            </linearGradient>
+                            <path
+                              id="a"
+                              d="M136.93 64.476v12.8a32.7 32.7 0 01-5.953-.952 38.7 38.7 0 01-26.79-22.742h21.848c6.008.022 10.872 4.887 10.895 10.894"
+                            />
+                          </defs>
+                          <path
+                            fill="#5059c9"
+                            d="M178.563 89.302h66.125c6.248 0 11.312 5.065 11.312 11.312v60.231c0 22.96-18.613 41.574-41.573 41.574h-.197c-22.96.003-41.576-18.607-41.579-41.568V95.215a5.91 5.91 0 015.912-5.913"
+                          />
+                          <circle
+                            cx={223.256}
+                            cy={50.605}
+                            r={26.791}
+                            fill="#5059c9"
+                          />
+                          <circle
+                            cx={139.907}
+                            cy={38.698}
+                            r={38.698}
+                            fill="#7b83eb"
+                          />
+                          <path
+                            fill="#7b83eb"
+                            d="M191.506 89.302H82.355c-6.173.153-11.056 5.276-10.913 11.449v68.697c-.862 37.044 28.445 67.785 65.488 68.692 37.043-.907 66.35-31.648 65.489-68.692v-68.697c.143-6.173-4.74-11.296-10.913-11.449"
+                          />
+                          <path
+                            d="M142.884 89.302v96.268a10.96 10.96 0 01-6.787 10.062c-1.3.55-2.697.833-4.108.833H76.68c-.774-1.965-1.488-3.93-2.084-5.953a72.5 72.5 0 01-3.155-21.076v-68.703c-.143-6.163 4.732-11.278 10.895-11.43z"
+                            opacity={0.1}
+                          />
+                          <path
+                            d="M136.93 89.302v102.222c0 1.411-.283 2.808-.833 4.108a10.96 10.96 0 01-10.062 6.787H79.48c-1.012-1.965-1.965-3.93-2.798-5.954a59 59 0 01-2.084-5.953 72.5 72.5 0 01-3.155-21.076v-68.703c-.143-6.163 4.732-11.278 10.895-11.43z"
+                            opacity={0.2}
+                          />
+                          <path
+                            d="M136.93 89.302v90.315c-.045 5.998-4.896 10.85-10.895 10.895H74.597a72.5 72.5 0 01-3.155-21.076v-68.703c-.143-6.163 4.732-11.278 10.895-11.43z"
+                            opacity={0.2}
+                          />
+                          <path
+                            d="M130.977 89.302v90.315c-.046 5.998-4.897 10.85-10.895 10.895H74.597a72.5 72.5 0 01-3.155-21.076v-68.703c-.143-6.163 4.732-11.278 10.895-11.43z"
+                            opacity={0.2}
+                          />
+                          <path
+                            d="M142.884 58.523v18.753c-1.012.06-1.965.12-2.977.12s-1.965-.06-2.977-.12a32.7 32.7 0 01-5.953-.952 38.7 38.7 0 01-26.791-22.742 33 33 0 01-1.905-5.954h29.708c6.007.023 10.872 4.887 10.895 10.895"
+                            opacity={0.1}
+                          />
+                          <use href="#a" opacity={0.2} />
+                          <use href="#a" opacity={0.2} />
+                          <path
+                            d="M130.977 64.476v11.848a38.7 38.7 0 01-26.791-22.743h15.896c6.008.023 10.872 4.888 10.895 10.895"
+                            opacity={0.2}
+                          />
+                          <path
+                            fill="url(#b)"
+                            d="M10.913 53.581h109.15c6.028 0 10.914 4.886 10.914 10.913v109.151c0 6.027-4.886 10.913-10.913 10.913H10.913C4.886 184.558 0 179.672 0 173.645V64.495C0 58.466 4.886 53.58 10.913 53.58"
+                          />
+                          <path
+                            fill="#fff"
+                            d="M94.208 95.125h-21.82v59.416H58.487V95.125H36.769V83.599h57.439z"
+                          />
+                        </svg>
+                        <p className="text-sm/6 text-gray-300">
+                          Microsoft Team
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <HorizontalDots className="text-white/5" />
+
+                  <div className="relative flex w-full items-center justify-center whitespace-nowrap">
+                    <HorizontalDots className="text-white/15" />
+                    <div className="absolute left-5 rounded-full bg-gradient-to-b from-[#303D4B] to-[#1F2C3B] px-3 py-1.5 ring-[1px] ring-inset ring-white/15">
+                      <div className="flex items-center justify-start gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 256 256"
+                        >
+                          <path
+                            fill="#fff"
+                            d="M195.368 60.632H60.632v134.736h134.736z"
+                          />
+                          <path
+                            fill="#ea4335"
+                            d="M195.368 256L256 195.368l-30.316-5.172-30.316 5.172-5.533 27.73z"
+                          />
+                          <path
+                            fill="#188038"
+                            d="M0 195.368v40.421C0 246.956 9.044 256 20.21 256h40.422l6.225-30.316-6.225-30.316-33.033-5.172z"
+                          />
+                          <path
+                            fill="#1967d2"
+                            d="M256 60.632V20.21C256 9.044 246.956 0 235.79 0h-40.422q-5.532 22.554-5.533 33.196 0 10.641 5.533 27.436 20.115 5.76 30.316 5.76T256 60.631"
+                          />
+                          <path
+                            fill="#fbbc04"
+                            d="M256 60.632h-60.632v134.736H256z"
+                          />
+                          <path
+                            fill="#34a853"
+                            d="M195.368 195.368H60.632V256h134.736z"
+                          />
+                          <path
+                            fill="#4285f4"
+                            d="M195.368 0H20.211C9.044 0 0 9.044 0 20.21v175.158h60.632V60.632h134.736z"
+                          />
+                          <path
+                            fill="#4285f4"
+                            d="M88.27 165.154c-5.036-3.402-8.523-8.37-10.426-14.94l11.689-4.816q1.59 6.063 5.558 9.398c2.627 2.223 5.827 3.318 9.566 3.318q5.734 0 9.852-3.487c2.746-2.324 4.127-5.288 4.127-8.875q0-5.508-4.345-8.994c-2.897-2.324-6.535-3.486-10.88-3.486h-6.754v-11.57h6.063q5.608 0 9.448-3.033c2.56-2.02 3.84-4.783 3.84-8.303 0-3.132-1.145-5.625-3.435-7.494-2.29-1.87-5.188-2.813-8.708-2.813-3.436 0-6.164.91-8.185 2.745a16.1 16.1 0 00-4.413 6.754l-11.57-4.817c1.532-4.345 4.345-8.185 8.471-11.503s9.398-4.985 15.798-4.985c4.733 0 8.994.91 12.767 2.745 3.772 1.836 6.736 4.379 8.875 7.613 2.14 3.25 3.2 6.888 3.2 10.93 0 4.126-.993 7.613-2.98 10.476s-4.43 5.052-7.327 6.585v.69a22.25 22.25 0 019.398 7.327c2.442 3.284 3.672 7.208 3.672 11.79 0 4.58-1.163 8.673-3.487 12.26-2.324 3.588-5.54 6.417-9.617 8.472-4.092 2.055-8.69 3.1-13.793 3.1-5.912.016-11.369-1.685-16.405-5.087m71.797-58.005l-12.833 9.28-6.417-9.734 23.023-16.607h8.825v78.333h-12.598z"
+                          />
+                        </svg>
+
+                        <p className="text-sm/6 text-gray-300">
+                          Google Calendar
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <HorizontalDots className="text-white/5" />
+
+                  <div className="relative flex w-full items-center justify-center whitespace-nowrap">
+                    <HorizontalDots className="text-white/15" />
+                    <div className="absolute right-10 rounded-full bg-gradient-to-b from-[#303D4B] to-[#1F2C3B] px-3 py-1.5 ring-[1px] ring-inset ring-white/15">
+                      <div className="flex items-center justify-start gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 256 199"
+                          className="h-5 w-5"
+                        >
+                          <path
+                            fill="#5865f2"
+                            d="M216.856 16.597A208.5 208.5 0 00164.042 0c-2.275 4.113-4.933 9.645-6.766 14.046q-29.538-4.442-58.533 0c-1.832-4.4-4.55-9.933-6.846-14.046a207.8 207.8 0 00-52.855 16.638C5.618 67.147-3.443 116.4 1.087 164.956c22.169 16.555 43.653 26.612 64.775 33.193A161 161 0 0079.735 175.3a136.4 136.4 0 01-21.846-10.632 109 109 0 005.356-4.237c42.122 19.702 87.89 19.702 129.51 0a132 132 0 005.355 4.237 136 136 0 01-21.886 10.653c4.006 8.02 8.638 15.67 13.873 22.848 21.142-6.58 42.646-16.637 64.815-33.213 5.316-56.288-9.08-105.09-38.056-148.36M85.474 135.095c-12.645 0-23.015-11.805-23.015-26.18s10.149-26.2 23.015-26.2 23.236 11.804 23.015 26.2c.02 14.375-10.148 26.18-23.015 26.18m85.051 0c-12.645 0-23.014-11.805-23.014-26.18s10.148-26.2 23.014-26.2c12.867 0 23.236 11.804 23.015 26.2 0 14.375-10.148 26.18-23.015 26.18"
+                          />
+                        </svg>
+
+                        <p className="text-sm/6 text-gray-300">Discord</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <HorizontalDots className="text-white/5" />
+
+                  <div className="relative flex w-full items-center justify-center whitespace-nowrap">
+                    <HorizontalDots className="text-white/15" />
+                    <div className="absolute left-14 rounded-full bg-gradient-to-b from-[#303D4B] to-[#1F2C3B] px-3 py-1.5 ring-[1px] ring-inset ring-white/15">
+                      <div className="flex items-center justify-start gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 128 128"
+                        >
+                          <path
+                            fill="#de1c59"
+                            d="M27.255 80.719c0 7.33-5.978 13.317-13.309 13.317S.63 88.049.63 80.719s5.987-13.317 13.317-13.317h13.309zm6.709 0c0-7.33 5.987-13.317 13.317-13.317s13.317 5.986 13.317 13.317v33.335c0 7.33-5.986 13.317-13.317 13.317-7.33 0-13.317-5.987-13.317-13.317zm0 0"
+                          />
+                          <path
+                            fill="#35c5f0"
+                            d="M47.281 27.255c-7.33 0-13.317-5.978-13.317-13.309S39.951.63 47.281.63s13.317 5.987 13.317 13.317v13.309zm0 6.709c7.33 0 13.317 5.987 13.317 13.317s-5.986 13.317-13.317 13.317H13.946C6.616 60.598.63 54.612.63 47.281c0-7.33 5.987-13.317 13.317-13.317zm0 0"
+                          />
+                          <path
+                            fill="#2eb57d"
+                            d="M100.745 47.281c0-7.33 5.978-13.317 13.309-13.317s13.317 5.987 13.317 13.317-5.987 13.317-13.317 13.317h-13.309zm-6.709 0c0 7.33-5.987 13.317-13.317 13.317s-13.317-5.986-13.317-13.317V13.946C67.402 6.616 73.388.63 80.719.63c7.33 0 13.317 5.987 13.317 13.317zm0 0"
+                          />
+                          <path
+                            fill="#ebb02e"
+                            d="M80.719 100.745c7.33 0 13.317 5.978 13.317 13.309s-5.987 13.317-13.317 13.317-13.317-5.987-13.317-13.317v-13.309zm0-6.709c-7.33 0-13.317-5.987-13.317-13.317s5.986-13.317 13.317-13.317h33.335c7.33 0 13.317 5.986 13.317 13.317 0 7.33-5.987 13.317-13.317 13.317zm0 0"
+                          />
+                        </svg>
+
+                        <p className="text-sm/6 text-gray-300">Slack</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <HorizontalDots className="text-white/5" />
+
+                  <div className="relative flex w-full items-center justify-center whitespace-nowrap">
+                    <HorizontalDots className="text-white/15" />
+                    <div className="absolute right-10 rounded-full bg-gradient-to-b from-[#303D4B] to-[#1F2C3B] px-3 py-1.5 ring-[1px] ring-inset ring-white/15">
+                      <div className="flex items-center justify-start gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 256 250"
+                        >
+                          <rect
+                            width={256}
+                            height={249.6}
+                            fill="#470137"
+                            rx={42.5}
+                          />
+                          <path
+                            fill="#ff61f6"
+                            d="M134.578 65.64l-31.943 52.723 34.175 55.985c.22.392.281.852.172 1.288-.053.186-.167.232-.342.239l-.194-.003-.236-.006c-.128 0-.271.006-.43.032h-24.64l-.484-.008c-1.328-.035-2.285-.225-2.868-1.199a3292 3292 0 00-6.87-13.309 470 470 0 00-6.34-11.767l-.958-1.714a783 783 0 01-7.642-13.91h-.172a532 532 0 01-7.127 13.738q-3.695 6.87-7.299 13.653a608 608 0 01-7.384 13.481c-.405.91-1.078 1.1-2.015 1.131l-.39.006H38.064l-.102.003-.336.03c-.187.011-.299-.029-.335-.311a1.73 1.73 0 01.258-1.202l33.144-54.44-32.286-54.61q-.514-.684-.172-1.116a1.25 1.25 0 011.031-.43H63.48a3.6 3.6 0 011.546.258c.41.233.763.556 1.03.945q3.091 6.87 6.87 13.738a737 737 0 007.642 13.567 192 192 0 017.127 13.567h.172a507 507 0 016.955-13.738q3.518-6.698 7.212-13.482a621 621 0 007.127-13.48c.132-.424.368-.808.687-1.117a2.5 2.5 0 011.374-.258h22.497a.984.984 0 01.95 1.634zm50.47 112.473l-1.184.013a53.2 53.2 0 01-22.927-4.808 36.45 36.45 0 01-16.057-14.512q-5.687-9.445-5.835-23.535l-.004-.765a44.84 44.84 0 015.84-22.497 42.87 42.87 0 0116.412-16.166l.589-.32q11.16-6.183 26.962-6.183l.46.005.526.017.59.026.656.038 1.102.078 1.248.1.913.08V55.852q0-1.201 1.03-1.202h21.639a.91.91 0 011.03 1.03v101.495q0 2.557.198 5.504l.32 4.455.17 2.577a1.775 1.775 0 01-1.031 1.718 85.2 85.2 0 01-17.345 5.151 93 93 0 01-15.302 1.533m9.291-21.282v-46.883a17 17 0 00-2.833-.515 34 34 0 00-3.521-.172 26.5 26.5 0 00-12.021 2.748 23.5 23.5 0 00-9.016 7.9q-3.401 4.974-3.517 12.99l-.004.577a30.3 30.3 0 001.803 10.99 20.9 20.9 0 004.81 7.557 18.3 18.3 0 007.212 4.293 28.3 28.3 0 008.844 1.375q2.403 0 4.465-.173a18.4 18.4 0 003.248-.54z"
+                          />
+                        </svg>
+
+                        <p className="text-sm/6 text-gray-300">
+                          Adobe Creative Cloud
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-10">
+                  <p className="font-mono text-xs/4 uppercase tracking-wider text-gray-300">
+                    Integrations
+                  </p>
+
+                  <h2 className="mt-2 max-w-2xl text-xl font-medium tracking-tighter text-white md:text-2xl/8">
+                    Connect powerful tools
+                  </h2>
+
+                  <p className="mt-2 max-w-xl text-sm/6 text-gray-500">
+                    BarelyHR connects with over 150 integrations right out of
+                    the box.
+                  </p>
+                </div>
+              </div>
               {/* interogations */}
 
               {/* 1:1 meetings */}
@@ -520,6 +872,25 @@ export default function Home() {
     </main>
   );
 }
+
+interface IHorizontalDots extends ComponentProps<"div"> {
+  length?: number;
+}
+
+const HorizontalDots = ({ className, length = 100 }: IHorizontalDots) => {
+  return (
+    <div
+      className={cn(
+        className,
+        "-mt-2 text-lg/none leading-10 tracking-[0.4em]",
+      )}
+    >
+      {Array(length)
+        .fill(0)
+        .map((_, idx) => ".")}
+    </div>
+  );
+};
 
 interface ITestimonialCard extends ComponentProps<"div"> {
   image: string;
