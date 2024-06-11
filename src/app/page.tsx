@@ -49,7 +49,7 @@ export default function Home() {
     <main className="">
       {/* hero */}
       <section className="p-2 pb-0">
-        <div className="w-full rounded-3xl bg-[linear-gradient(125deg,var(--tw-gradient-stops))] from-[#FFF1BE] from-[28%] via-[#EE87CB] via-[70%] to-[#b060FF] pb-24 pt-16 ring-inset ring-black/5 md:pb-[11.8rem]">
+        <div className="w-full rounded-[2rem] bg-[linear-gradient(125deg,var(--tw-gradient-stops))] from-[#FFF1BE] from-[28%] via-[#EE87CB] via-[70%] to-[#b060FF] pb-24 pt-16 ring-inset ring-black/5 md:pb-[11.8rem]">
           <nav className="relative flex items-center justify-between px-5 py-2 md:px-12 xl:px-0">
             {/* grid lines */}
             <div className="absolute -inset-y-0 -left-2 -right-2">
@@ -187,7 +187,7 @@ export default function Home() {
 
       {/* hiring */}
       <section className="bg-gradient-to-b from-white from-10% to-gray-100 py-32">
-        <div className="mx-auto w-full max-w-screen-xl px-5 xl:px-0">
+        <div className="mx-auto w-full max-w-screen-xl px-3 xl:px-0">
           <p className="font-mono text-xs/4 uppercase tracking-wider text-gray-500">
             hiring
           </p>
@@ -197,7 +197,7 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="mx-auto mt-16 max-w-screen-xl px-5 xl:px-0">
+        <div className="mx-auto mt-16 max-w-screen-xl px-3 xl:px-0">
           <div className="grid grid-cols-12 gap-4">
             {/* kanban */}
             <div className="col-span-12 rounded-lg rounded-t-[2rem] bg-white shadow-sm ring-[1px] ring-gray-950/5 md:col-span-6 md:rounded-tl-[2rem] md:rounded-tr-lg">
@@ -317,6 +317,111 @@ export default function Home() {
         </div>
       </section>
       {/* end of hiring */}
+
+      {/* onboarding */}
+      <section className="bg-gray-100 px-3">
+        <div className="relative overflow-hidden rounded-[2rem] bg-[#0F1929] p-10 py-32">
+          {/* gradient */}
+          <div className="absolute -top-16 right-20 h-32 w-[30rem] rounded-full bg-[linear-gradient(125deg,var(--tw-gradient-stops))] from-[#4A322E] from-[28%] to-[#501D45] blur-3xl"></div>
+          {/* gradient */}
+
+          <div className="mx-auto w-full max-w-screen-xl">
+            <p className="font-mono text-xs/4 uppercase tracking-wider text-gray-300">
+              onboarding
+            </p>
+
+            <h2 className="mt-6 max-w-2xl text-5xl font-medium tracking-tighter text-white md:text-6xl">
+              Employee engagement has never been easier.
+            </h2>
+          </div>
+
+          <div className="mx-auto my-16 w-full max-w-screen-xl">
+            <div className="grid grid-cols-12 gap-4">
+              {/* training */}
+              <div className="col-span-8 overflow-hidden rounded-lg rounded-tl-[2rem] bg-[#1D2A39] ring-[1px] ring-white/15">
+                <div className="w-full pl-5 pt-5 [mask-image:linear-gradient(transparent,black_20%,black_80%,transparent)]">
+                  <div className="flex flex-shrink-0 items-start justify-start gap-10">
+                    {/* left */}
+                    <div className="w-72 border-l border-white/15 pl-5">
+                      <p className="truncate text-sm font-medium text-gray-400">
+                        Introduction
+                      </p>
+
+                      <div className="mt-5 space-y-3 border-l border-white/15">
+                        <p className="truncate pl-5 text-sm text-gray-500">
+                          Overview
+                        </p>
+                        <p className="-ml-px truncate border-l pl-5 text-sm text-white">
+                          Importance of safety in the workplace
+                        </p>
+                        <p className="truncate pl-5 text-sm text-gray-500">
+                          Introduction to OSHA (Occupation)
+                        </p>
+                        <p className="truncate pl-5 text-sm text-gray-500">
+                          Basic safety principles and practises
+                        </p>
+                      </div>
+
+                      <p className="mt-5 truncate text-sm font-medium text-white">
+                        Regulations and Compliance
+                      </p>
+
+                      <div className="mt-5 space-y-3 border-l border-white/15">
+                        <p className="truncate pl-5 text-sm text-gray-500">
+                          Overview
+                        </p>
+                        <p className="truncate pl-5 text-sm text-gray-500">
+                          Importance of safety in the workplace
+                        </p>
+                        <p className="truncate pl-5 text-sm text-gray-500">
+                          Introduction to OSHA (Occupation)
+                        </p>
+                        <p className="truncate pl-5 text-sm text-gray-500">
+                          Basic safety principles and practises
+                        </p>
+                      </div>
+                    </div>
+                    {/* left */}
+
+                    {/* right */}
+                    {/* right */}
+                  </div>
+                </div>
+
+                <div className="p-10">
+                  <p className="font-mono text-xs/4 uppercase tracking-wider text-gray-300">
+                    training
+                  </p>
+
+                  <h2 className="mt-2 max-w-2xl text-xl font-medium tracking-tighter text-white md:text-2xl/8">
+                    Get new employees up to speed
+                  </h2>
+
+                  <p className="mt-2 max-w-xl text-sm/6 text-gray-500">
+                    BarelyHR will help you set employees up for success. Using
+                    artificial intelligence, BarelyHR will generate full
+                    training programs for new employees to complete.
+                  </p>
+                </div>
+              </div>
+              {/* training */}
+
+              {/* interogations */}
+              <div className="col-span-4"></div>
+              {/* interogations */}
+
+              {/* 1:1 meetings */}
+              <div className="col-span-4"></div>
+              {/* 1:1 meetings */}
+
+              {/* engagement */}
+              <div className="col-span-8"></div>
+              {/* engagement */}
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* onboarding */}
 
       {/* testimonial */}
       <section className="py-32">
