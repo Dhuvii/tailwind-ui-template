@@ -320,13 +320,13 @@ export default function Home() {
 
       {/* onboarding */}
       <section className="bg-gray-100 px-3">
-        <div className="relative overflow-hidden rounded-[2rem] bg-[#0F1929] p-10 py-32">
+        <div className="relative overflow-hidden rounded-[2rem] bg-[#0F1929] p-4 pb-0 pt-10 md:p-10 md:pt-32">
           {/* gradient */}
           <div className="absolute -top-16 right-20 h-32 w-[30rem] rounded-full bg-[linear-gradient(125deg,var(--tw-gradient-stops))] from-[#4A322E] from-[28%] to-[#501D45] blur-3xl"></div>
           {/* gradient */}
 
           <div className="mx-auto w-full max-w-screen-xl">
-            <p className="font-mono text-xs/4 uppercase tracking-wider text-gray-300">
+            <p className="font-mono text-xs/4 uppercase tracking-[0.15em] text-gray-400">
               onboarding
             </p>
 
@@ -438,7 +438,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-10">
-                  <p className="font-mono text-xs/4 uppercase tracking-wider text-gray-300">
+                  <p className="font-mono text-xs/4 uppercase tracking-[0.15em] text-gray-400">
                     training
                   </p>
 
@@ -746,7 +746,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-10">
-                  <p className="font-mono text-xs/4 uppercase tracking-wider text-gray-300">
+                  <p className="font-mono text-xs/4 uppercase tracking-[0.15em] text-gray-400">
                     Integrations
                   </p>
 
@@ -763,11 +763,147 @@ export default function Home() {
               {/* interogations */}
 
               {/* 1:1 meetings */}
-              <div className="col-span-4"></div>
+              <div className="col-span-12 overflow-hidden rounded-lg bg-[#1D2A39] ring-[1px] ring-white/15 md:col-span-6 md:rounded-bl-[2rem] xl:col-span-4">
+                <div className="relative flex h-96 w-full items-center justify-center overflow-hidden">
+                  <Rings />
+
+                  <div className="absolute inset-0 flex items-center justify-center gap-10">
+                    {/* image */}
+                    <div className="relative size-16 overflow-hidden rounded-full ring-4 ring-white/10 md:size-20">
+                      <Image
+                        fill
+                        className="w-full object-cover"
+                        src={
+                          "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        }
+                        alt={`Image of \$\{name\}`}
+                      />
+                    </div>
+                    {/* image */}
+
+                    {/* check icon */}
+                    <div className="rounded-full border border-white/10 bg-gradient-to-b from-[#59E19E] to-[#00C649] p-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 text-white"
+                        viewBox="0 0 24 24"
+                      >
+                        <g fill="none">
+                          <path
+                            fill="currentColor"
+                            d="M4.565 12.407a.75.75 0 10-1.13.986zM7.143 16.5l-.565.493a.75.75 0 001.13 0zm8.422-8.507a.75.75 0 10-1.13-.986zm-5.059 3.514a.75.75 0 001.13.986zm-.834 3.236a.75.75 0 10-1.13-.986zm-6.237-1.35l3.143 3.6 1.13-.986-3.143-3.6zm4.273 3.6l1.964-2.25-1.13-.986-1.964 2.25zm3.928-4.5l1.965-2.25-1.13-.986-1.965 2.25zm1.965-2.25l1.964-2.25-1.13-.986-1.964 2.25z"
+                          />
+                          <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M20 7.563l-4.286 4.5M11 16l.429.563 2.143-2.25"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    {/* check icon */}
+
+                    {/* image */}
+                    <div className="relative size-16 overflow-hidden rounded-full ring-4 ring-white/10 md:size-20">
+                      <Image
+                        fill
+                        className="w-full object-cover"
+                        src={
+                          "https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        }
+                        alt={`Image of \$\{name\}`}
+                      />
+                    </div>
+                    {/* image */}
+                  </div>
+                </div>
+
+                <div className="p-10">
+                  <p className="font-mono text-xs/4 uppercase tracking-[0.15em] text-gray-400">
+                    1:1 Meetings
+                  </p>
+
+                  <h2 className="mt-2 max-w-2xl text-xl font-medium tracking-tighter text-white md:text-2xl/8">
+                    Check-in with your team
+                  </h2>
+
+                  <p className="mt-2 max-w-xl text-sm/6 text-gray-500">
+                    Have 1:1 meetings automatically scheduled with each of your
+                    employees
+                  </p>
+                </div>
+              </div>
               {/* 1:1 meetings */}
 
               {/* engagement */}
-              <div className="col-span-8"></div>
+              <div className="col-span-12 overflow-hidden rounded-lg rounded-bl-[2rem] rounded-br-[2rem] bg-[#1D2A39] ring-[1px] ring-white/15 md:col-span-6 md:rounded-bl-lg md:rounded-br-[2rem] xl:col-span-8">
+                <div className="h-96 w-full pl-10 pt-24">
+                  <p className="text-base/6 font-medium text-white">
+                    Popular topics
+                  </p>
+
+                  <div className="mt-5 flex w-full items-center justify-start gap-8">
+                    <div className="relative aspect-video h-36 flex-shrink-0 overflow-hidden rounded-xl bg-black/90 shadow-xl after:absolute after:inset-0 after:m-[2px] after:rounded-[calc(0.75rem-2px)] after:ring-[2px] after:ring-white/10 after:content-['']">
+                      <Image
+                        fill
+                        className="w-full object-cover [mask-image:linear-gradient(black,transparent)]"
+                        src={
+                          "https://images.pexels.com/photos/3201920/pexels-photo-3201920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        }
+                        alt={`Image of \$\{name\}`}
+                      />
+
+                      <div className="absolute bottom-0 left-0 p-6 pb-7 text-sm text-white">
+                        Longue
+                      </div>
+                    </div>
+
+                    <div className="relative aspect-video h-36 flex-shrink-0 overflow-hidden rounded-xl bg-black/90 shadow-xl after:absolute after:inset-0 after:m-[2px] after:rounded-[calc(0.75rem-2px)] after:ring-[2px] after:ring-white/10 after:content-['']">
+                      <Image
+                        fill
+                        className="w-full object-cover [mask-image:linear-gradient(black,transparent)]"
+                        src={
+                          "https://images.pexels.com/photos/9159050/pexels-photo-9159050.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        }
+                        alt={`Image of \$\{name\}`}
+                      />
+                      <div className="absolute bottom-0 left-0 p-6 pb-7 text-sm text-white">
+                        Leadership
+                      </div>
+                    </div>
+                    <div className="relative aspect-video h-36 flex-shrink-0 overflow-hidden rounded-xl bg-black/90 shadow-xl after:absolute after:inset-0 after:m-[2px] after:rounded-[calc(0.75rem-2px)] after:ring-[2px] after:ring-white/10 after:content-['']">
+                      <Image
+                        fill
+                        className="w-full object-cover [mask-image:linear-gradient(black,transparent)]"
+                        src={
+                          "https://images.pexels.com/photos/1015568/pexels-photo-1015568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        }
+                        alt={`Image of \$\{name\}`}
+                      />
+                      <div className="absolute bottom-0 left-0 p-6 pb-7 text-sm text-white">
+                        Product Development
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-10">
+                  <p className="font-mono text-xs/4 uppercase tracking-[0.15em] text-gray-400">
+                    Engagement
+                  </p>
+
+                  <h2 className="mt-2 max-w-2xl text-xl font-medium tracking-tighter text-white md:text-2xl/8">
+                    Build communities
+                  </h2>
+
+                  <p className="mt-2 max-w-lg text-sm/6 text-gray-500">
+                    Create discussion boards for employees to to engage with one
+                    another and discuss work related topics.
+                  </p>
+                </div>
+              </div>
               {/* engagement */}
             </div>
           </div>
@@ -872,6 +1008,65 @@ export default function Home() {
     </main>
   );
 }
+
+interface IRing extends ComponentProps<"div"> {}
+
+const Ring = ({ className, children }: IRing) => {
+  return (
+    <div
+      className={cn(
+        "flex h-full w-full flex-shrink-0 items-center justify-center rounded-full border border-white/10 p-2",
+        className,
+      )}
+    >
+      {children}
+    </div>
+  );
+};
+
+const Rings = () => {
+  return (
+    <Ring className="size-96 [mask-image:radial-gradient(circle,_black_20%,_transparent_70%)]">
+      <Ring>
+        <Ring>
+          <Ring>
+            <Ring>
+              <Ring>
+                <Ring>
+                  <Ring>
+                    <Ring>
+                      <Ring>
+                        <Ring>
+                          <Ring>
+                            <Ring>
+                              <Ring>
+                                <Ring>
+                                  <Ring>
+                                    <Ring>
+                                      <Ring>
+                                        <Ring>
+                                          <Ring></Ring>
+                                        </Ring>
+                                      </Ring>
+                                    </Ring>
+                                  </Ring>
+                                </Ring>
+                              </Ring>
+                            </Ring>
+                          </Ring>
+                        </Ring>
+                      </Ring>
+                    </Ring>
+                  </Ring>
+                </Ring>
+              </Ring>
+            </Ring>
+          </Ring>
+        </Ring>
+      </Ring>
+    </Ring>
+  );
+};
 
 interface IHorizontalDots extends ComponentProps<"div"> {
   length?: number;
