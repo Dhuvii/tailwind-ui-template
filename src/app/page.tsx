@@ -1005,6 +1005,270 @@ export default function Home() {
         </div>
       </section>
       {/* testimonial */}
+
+      {/* footer */}
+      <footer className="bg-[linear-gradient(155deg,var(--tw-gradient-stops))] from-[#FFF1BE] from-[28%] via-[#EE87CB] via-[80%] to-[#b060FF] p-2">
+        <div className="rounded-[2rem] bg-white/65 pb-20">
+          <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center rounded-[2rem] px-5 py-28 xl:px-0">
+            <p className="font-mono text-xs/6 uppercase tracking-wider text-gray-950/50">
+              Get started
+            </p>
+
+            <h2 className="mt-3 max-w-2xl text-balance text-center text-2xl font-medium tracking-tighter text-gray-950 md:text-5xl">
+              Ready to dive in? <br /> Start your free trial today.
+            </h2>
+
+            <p className="mt-7 max-w-[22rem] text-center text-sm/6 text-gray-950/50">
+              Start finding the right people for the right job and build your
+              dream team.
+            </p>
+
+            <Link
+              href=""
+              className="mt-7 w-full rounded-full bg-gray-950 px-4 py-3 text-center text-sm font-medium tracking-wide text-white shadow-md md:w-auto md:text-base/4"
+            >
+              Get started
+            </Link>
+          </div>
+
+          <div className="relative w-full">
+            {/* grid lines */}
+            <div className="absolute -inset-y-0 -left-2 -right-2">
+              <div className="absolute -inset-y-px inset-x-0 border-t border-black/10"></div>
+              <div className="absolute -inset-y-[9px] inset-x-0 border-t border-black/10"></div>
+            </div>
+            {/* grid lines */}
+
+            <div className="mx-auto flex w-full max-w-screen-xl items-start justify-between py-8">
+              {/* logo */}
+              <ContainerWithPlusCorner
+                className="hidden md:block"
+                hideBottom
+                topLeftClassName="-top-[calc(2.8rem+0.3px)]"
+                topRightClassName="-top-[calc(2.8rem+0.3px)]"
+              >
+                <div className="flex items-center justify-start gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="size-9 text-gray-800"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33"
+                    />
+                  </svg>
+
+                  <p className="font-medium text-gray-950">BarelyHR</p>
+                </div>
+              </ContainerWithPlusCorner>
+              {/* end of logo */}
+
+              <div className="grid w-full grid-cols-1 place-items-center gap-10 md:max-w-screen-md md:grid-cols-4 md:place-items-start">
+                <ul className="space-y-5 text-center md:text-left">
+                  <li className="text-sm font-medium text-gray-950/60">
+                    Product
+                  </li>
+
+                  <li>
+                    <Link
+                      className="text-sm font-medium text-gray-950"
+                      href="#"
+                    >
+                      Pricing
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      className="text-sm font-medium text-gray-950"
+                      href="#"
+                    >
+                      Onboarding
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      className="text-sm font-medium text-gray-950"
+                      href="#"
+                    >
+                      Hiring
+                    </Link>
+                  </li>
+                </ul>
+
+                <ul className="space-y-5 text-center md:text-left">
+                  <li className="text-sm font-medium text-gray-950/60">
+                    Company
+                  </li>
+
+                  <li>
+                    <Link
+                      className="text-sm font-medium text-gray-950"
+                      href="#"
+                    >
+                      Careers
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      className="text-sm font-medium text-gray-950"
+                      href="#"
+                    >
+                      Blog
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      className="text-sm font-medium text-gray-950"
+                      href="#"
+                    >
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+
+                <ul className="space-y-5 text-center md:text-left">
+                  <li className="text-sm font-medium text-gray-950/60">
+                    Support
+                  </li>
+
+                  <li>
+                    <Link
+                      className="text-sm font-medium text-gray-950"
+                      href="#"
+                    >
+                      Help center
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      className="text-sm font-medium text-gray-950"
+                      href="#"
+                    >
+                      Community
+                    </Link>
+                  </li>
+                </ul>
+
+                <ul className="space-y-5 text-center md:text-left">
+                  <li className="text-sm font-medium text-gray-950/60">
+                    Company
+                  </li>
+
+                  <li>
+                    <Link
+                      className="text-sm font-medium text-gray-950"
+                      href="#"
+                    >
+                      Terms of service
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      className="text-sm font-medium text-gray-950"
+                      href="#"
+                    >
+                      Privacy policy
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative flex flex-col items-center justify-between px-5 py-2 md:flex-row md:px-12 xl:px-0">
+            {/* grid lines */}
+            <div className="absolute -inset-y-0 -left-2 -right-2">
+              <div className="absolute -inset-y-px inset-x-0 border-y border-black/10"></div>
+              <div className="absolute -inset-y-[9px] inset-x-0 border-y border-black/10"></div>
+            </div>
+            {/* grid lines */}
+
+            <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center md:flex-row">
+              <div className="flex w-full flex-col items-center gap-5 md:flex-row">
+                {/* logo */}
+                <ContainerWithPlusCorner className="">
+                  <p className="py-5 text-sm/6 text-gray-950/70">
+                    &copy; {new Date().getFullYear()} BarelyHR, inc.
+                  </p>
+                </ContainerWithPlusCorner>
+                {/* end of logo */}
+              </div>
+
+              <div className="flex items-center gap-5">
+                <ContainerWithPlusCorner
+                  topRightClassName="hidden"
+                  bottomRightClassName="hidden"
+                >
+                  <Link
+                    href={"#"}
+                    className="block px-3 py-[calc(1.4rem)] text-base font-medium text-gray-950"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="size-5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
+                      />
+                    </svg>
+                  </Link>
+                </ContainerWithPlusCorner>
+
+                <Link
+                  href={"#"}
+                  className="relative block px-3 py-[calc(1.4rem)] text-base font-medium text-gray-950"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="size-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 01-1.93.07 4.28 4.28 0 004 2.98 8.52 8.52 0 01-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23"
+                    />
+                  </svg>
+                </Link>
+
+                <ContainerWithPlusCorner
+                  topLeftClassName="hidden"
+                  bottomLeftClassName="hidden"
+                >
+                  <Link
+                    href={"#"}
+                    className="block px-3 py-[calc(1.4rem)] text-base font-medium text-gray-950"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="size-5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2zm-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"
+                      />
+                    </svg>
+                  </Link>
+                </ContainerWithPlusCorner>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      {/* footer */}
     </main>
   );
 }
@@ -1155,14 +1419,26 @@ const TestimonialCard = forwardRef<HTMLDivElement, ITestimonialCard>(
 
 interface IContainerWithPlusCorner extends ComponentProps<"div"> {
   children: ReactNode;
+  hideBottom?: boolean;
+  hideTop?: Boolean;
+  topLeftClassName?: string;
+  topRightClassName?: string;
+  bottomLeftClassName?: string;
+  bottomRightClassName?: string;
 }
 
 const ContainerWithPlusCorner = ({
   children,
   className,
+  hideBottom = false,
+  hideTop = false,
+  topLeftClassName,
+  topRightClassName,
+  bottomLeftClassName,
+  bottomRightClassName,
 }: IContainerWithPlusCorner) => {
   return (
-    <div className={`pointer-events-none relative`}>
+    <div className={cn(`relative`, className)}>
       {/* border plus */}
       {/* top-left */}
       <svg
@@ -1172,8 +1448,8 @@ const ContainerWithPlusCorner = ({
         strokeWidth={1.1}
         stroke="currentColor"
         className={cn(
-          "absolute -left-5 -top-[calc(1.25rem+0.45px)] size-6 text-black/10",
-          className,
+          `${hideTop ? "hidden" : "block"} absolute -left-5 -top-[calc(1.25rem+0.45px)] hidden size-6 text-black/10 md:block`,
+          topLeftClassName,
         )}
       >
         <path
@@ -1191,7 +1467,10 @@ const ContainerWithPlusCorner = ({
         viewBox="0 0 24 24"
         strokeWidth={1.1}
         stroke="currentColor"
-        className="absolute -right-5 -top-[calc(1.25rem+0.45px)] size-6 text-black/10"
+        className={cn(
+          `${hideTop ? "hidden" : "block"} absolute -right-5 -top-[calc(1.25rem+0.45px)] hidden size-6 text-black/10 md:block`,
+          topRightClassName,
+        )}
       >
         <path
           strokeLinecap="round"
@@ -1208,7 +1487,10 @@ const ContainerWithPlusCorner = ({
         viewBox="0 0 24 24"
         strokeWidth={1.1}
         stroke="currentColor"
-        className="absolute -bottom-[calc(1.25rem+0.45px)] -left-5 size-6 text-black/10"
+        className={cn(
+          `${hideBottom ? "hidden" : "block"} absolute -bottom-[calc(1.25rem+0.45px)] -left-5 hidden size-6 text-black/10 md:block`,
+          bottomLeftClassName,
+        )}
       >
         <path
           strokeLinecap="round"
@@ -1225,7 +1507,10 @@ const ContainerWithPlusCorner = ({
         viewBox="0 0 24 24"
         strokeWidth={1.1}
         stroke="currentColor"
-        className="absolute -bottom-[calc(1.25rem+0.45px)] -right-5 size-6 text-black/10"
+        className={cn(
+          `${hideBottom ? "hidden" : "block"} absolute -bottom-[calc(1.25rem+0.45px)] -right-5 hidden size-6 text-black/10 md:block`,
+          bottomRightClassName,
+        )}
       >
         <path
           strokeLinecap="round"
