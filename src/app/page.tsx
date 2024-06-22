@@ -1043,9 +1043,10 @@ export default function Home() {
               {/* logo */}
               <ContainerWithPlusCorner
                 className="hidden md:block"
-                hideBottom
                 topLeftClassName="-top-[calc(2.8rem+0.3px)]"
                 topRightClassName="-top-[calc(2.8rem+0.3px)]"
+                bottomLeftClassName="hidden md:hidden"
+                bottomRightClassName="hidden md:hidden"
               >
                 <div className="flex items-center justify-start gap-2">
                   <svg
@@ -1197,7 +1198,7 @@ export default function Home() {
             <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center md:flex-row">
               <div className="flex w-full flex-col items-center gap-5 md:flex-row">
                 {/* logo */}
-                <ContainerWithPlusCorner className="">
+                <ContainerWithPlusCorner hideBottom className="">
                   <p className="py-5 text-sm/6 text-gray-950/70">
                     &copy; {new Date().getFullYear()} BarelyHR, inc.
                   </p>
@@ -1207,8 +1208,8 @@ export default function Home() {
 
               <div className="flex items-center gap-5">
                 <ContainerWithPlusCorner
-                  topRightClassName="hidden"
-                  bottomRightClassName="hidden"
+                  topRightClassName="hidden md:hidden"
+                  bottomRightClassName="hidden md:hidden"
                 >
                   <Link
                     href={"#"}
@@ -1244,8 +1245,8 @@ export default function Home() {
                 </Link>
 
                 <ContainerWithPlusCorner
-                  topLeftClassName="hidden"
-                  bottomLeftClassName="hidden"
+                  topLeftClassName="hidden md:hidden"
+                  bottomLeftClassName="hidden md:hidden"
                 >
                   <Link
                     href={"#"}
@@ -1448,7 +1449,7 @@ const ContainerWithPlusCorner = ({
         strokeWidth={1.1}
         stroke="currentColor"
         className={cn(
-          `${hideTop ? "hidden" : "block"} absolute -left-5 -top-[calc(1.25rem+0.45px)] hidden size-6 text-black/10 md:block`,
+          `${hideTop ? "hidden md:hidden" : "block"} absolute -left-5 -top-[calc(1.25rem+0.45px)] hidden size-6 text-black/10 md:block`,
           topLeftClassName,
         )}
       >
@@ -1468,7 +1469,7 @@ const ContainerWithPlusCorner = ({
         strokeWidth={1.1}
         stroke="currentColor"
         className={cn(
-          `${hideTop ? "hidden" : "block"} absolute -right-5 -top-[calc(1.25rem+0.45px)] hidden size-6 text-black/10 md:block`,
+          `${hideTop ? "hidden md:hidden" : "block"} absolute -right-5 -top-[calc(1.25rem+0.45px)] hidden size-6 text-black/10 md:block`,
           topRightClassName,
         )}
       >
@@ -1488,7 +1489,7 @@ const ContainerWithPlusCorner = ({
         strokeWidth={1.1}
         stroke="currentColor"
         className={cn(
-          `${hideBottom ? "hidden" : "block"} absolute -bottom-[calc(1.25rem+0.45px)] -left-5 hidden size-6 text-black/10 md:block`,
+          `${hideBottom ? "hidden md:hidden" : "block"} absolute -bottom-[calc(1.25rem+0.45px)] -left-5 hidden size-6 text-black/10 md:block`,
           bottomLeftClassName,
         )}
       >
@@ -1508,7 +1509,7 @@ const ContainerWithPlusCorner = ({
         strokeWidth={1.1}
         stroke="currentColor"
         className={cn(
-          `${hideBottom ? "hidden" : "block"} absolute -bottom-[calc(1.25rem+0.45px)] -right-5 hidden size-6 text-black/10 md:block`,
+          `${hideBottom ? "hidden md:hidden" : "block"} absolute -bottom-[calc(1.25rem+0.45px)] -right-5 hidden size-6 text-black/10 md:block`,
           bottomRightClassName,
         )}
       >
